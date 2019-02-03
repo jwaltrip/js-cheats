@@ -6,13 +6,14 @@ const Post = require("../models/Post");
 
 // GET - gets all posts from DB
 router.get('/', (req, res, next) => {
-  Post.find({}, (err, posts) => {
-    if (err) {
+  Post.find({}).sort({ _id: -1 }).exec()
+    .then(posts => {
+      return res.json(posts);
+    })
+    .catch(err => {
       console.log("Error retreiving posts from DB"+ err);
-    }
-
-    res.json(posts);
-  });
+      return res.sendStatus(500);
+    })
 });
 
 // POST route - add a post to the DB
