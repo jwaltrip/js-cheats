@@ -16,6 +16,7 @@ class App extends Component {
     return (
       <Router>
         <div>
+          
           <TopNavbar />
           <Container>
             <Route exact path="/" component={ Home } />
