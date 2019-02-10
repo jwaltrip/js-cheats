@@ -9,6 +9,10 @@ import TopNavbar from "./components/TopNavbar/TopNavbar";
 import Register from "./components/Register/Register";
 import Login from "./components/Login/Login";
 import Home from "./components/Home/Home";
+import Home2 from "./components/Home/Home2";
+import StringPage from "./components/StringPage/StringPage";
+import NumberPage from "./components/NumberPage/NumberPage";
+import ArrayPage from "./components/ArrayPage/ArrayPage";
 import { Container } from 'reactstrap';
 
 class App extends Component {
@@ -19,10 +23,13 @@ class App extends Component {
           
           <TopNavbar />
           <Container>
-            <Route exact path="/" component={ Home } />
+            <Route exact path="/" component={ Home2 } />
             <Route exact path="/register" component={ Register } />
             <Route exact path="/login" component={ Login } />
             <Route exact path="/posts" component={ PostContainer } />
+            <Route exact path="/strings" component={ StringPage } />
+            <Route exact path="/arrays" component={ ArrayPage } />
+            <Route exact path="/numbers" component={ NumberPage } />
           </Container>
         </div>
       </Router>
