@@ -10,7 +10,7 @@ const Home = (props) => {
   const loggedInContent = <p>Have any questions? Check out our <Link to="/posts">Blog!</Link></p>;
 
   return (
-    <div className="container" style={{ width: 700 }}>
+    <div className="container">
       <h1>Javascript Bible</h1>
       <ul> And on the 7th day he said let there be cheats - Genesis 1:27 </ul>
 
@@ -18,13 +18,13 @@ const Home = (props) => {
       {props.auth.isAuthenticated ? loggedInContent : loggedOutContent}
       <Row>
         <Col>
-          <Link to="/strings"><HomeCard title={'Strings'} description={'Become boss at javascript strings'} /></Link>
+          <Link to="/strings"><HomeCard title={'strings'} description={'Become boss at javascript strings'} /></Link>
         </Col>
         <Col>
-          <Link to="/arrays"><HomeCard title={'Arrays'} description={'Become boss at javascript arrays'} /></Link>
+          <Link to="/arrays"><HomeCard title={'arrays'} description={'Become boss at javascript arrays'} /></Link>
         </Col>
         <Col>
-          <Link to="/numbers"><HomeCard title={'Numbers'} description={'Become boss at javascript numbers'} /></Link>
+          <Link to="/numbers"><HomeCard title={'numbers'} description={'Become boss at javascript numbers'} /></Link>
         </Col>
       </Row>
     </div>
