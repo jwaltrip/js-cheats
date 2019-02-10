@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import HomeCard from '../HomeCard/HomeCard';
+import { Row, Col } from 'reactstrap';
 
 const Home = (props) => {
   const loggedOutContent = <p><Link to="/register">Register</Link> or <Link to="/login">Log in</Link> to see the Posts!</p>;
@@ -14,6 +16,17 @@ const Home = (props) => {
 
       <hr/>
       {props.auth.isAuthenticated ? loggedInContent : loggedOutContent}
+      <Row>
+        <Col>
+          <Link to="/strings"><HomeCard title={'Strings'} description={'Become boss at javascript strings'} /></Link>
+        </Col>
+        <Col>
+          <Link to="/arrays"><HomeCard title={'Arrays'} description={'Become boss at javascript arrays'} /></Link>
+        </Col>
+        <Col>
+          <Link to="/numbers"><HomeCard title={'Numbers'} description={'Become boss at javascript numbers'} /></Link>
+        </Col>
+      </Row>
     </div>
   );
 };
