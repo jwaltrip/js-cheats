@@ -4,27 +4,27 @@ import strings from './notebook.gif';
 import arrays from './arraysNotebook.gif';
 import numbers from './numbersNotebook.gif';
 import "./HomeCard.css";
-import { Card, CardText, CardBody, CardTitle } from 'reactstrap';
+import { Card, CardText, CardBody, CardTitle, CardImg } from 'reactstrap';
 
 const HomeCard = (props) => {
   const { title, description, cardType } = props;
 
-  let whatToShow = "";
-  if(props.title === "strings"){
-    whatToShow = <img src={strings} alt="strings" width="275px" display="flex"/>;
-  } else if(props.title === "arrays"){
-    whatToShow = <img src={arrays} alt="arrays" width="275px" display="flex"/>;
-  } else {
-    whatToShow = <img src={numbers} alt="numbers" width="275px" display="flex"/>;
+  let cardImg = "";
+  if (props.title === "Strings") {
+    cardImg = <CardImg top src={strings} alt="strings" width="100%" />;
+  } else if (props.title === "Arrays") {
+    cardImg = <CardImg top src={arrays} alt="arrays" width="100%" />;
+  } else if (props.title === "Numbers") {
+    cardImg = <CardImg top src={numbers} alt="numbers" width="100%" />;
   }
 
   return (
     <Card className="cards">
+      {cardImg}
       <CardBody>
-        {whatToShow}
         <CardTitle className="cardTitle">{title}</CardTitle>
         {/*<CardSubtitle>Card subtitle</CardSubtitle>*/}
-        <CardText classname="cardText">{description}</CardText>
+        <CardText className="cardText">{description}</CardText>
       </CardBody>
     </Card>
   );
