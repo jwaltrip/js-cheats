@@ -45,7 +45,7 @@ class ArrayPage extends Component {
       <div className='page-container'>
         <SideNavbar routes={routes} />
 
-        <Container>
+        <div className='subpage-container'>
 
           {routes.map((route, idx) => (
             <Route
@@ -56,7 +56,7 @@ class ArrayPage extends Component {
             />
           ))}
 
-        </Container>
+        </div>
       </div>
     );
   }

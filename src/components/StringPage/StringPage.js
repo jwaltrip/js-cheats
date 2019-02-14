@@ -38,18 +38,18 @@ class StringPage extends Component {
       <div className='page-container'>
         <SideNavbar routes={routes} />
 
-        <Container>
+        <div className='subpage-container'>
 
-          {routes.map((route, idx) => (
-            <Route
-              key={idx}
-              exact={route.exact}
-              path={route.path}
-              component={route.comp}
-            />
-          ))}
+            {routes.map((route, idx) => (
+              <Route
+                key={idx}
+                exact={route.exact}
+                path={route.path}
+                component={route.comp}
+              />
+            ))}
 
-        </Container>
+        </div>
       </div>
     );
   }

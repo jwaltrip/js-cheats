@@ -14,3 +14,8 @@
 nav {
   grid-area: navs;
 }
+
+.subpage-container {
+  margin: 0 15px;
+  padding: 0 15px;
+}

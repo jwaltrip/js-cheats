@@ -39,7 +39,7 @@ class NumberPage extends Component {
       <div className='page-container'>
         <SideNavbar routes={routes} />
 
-        <Container>
+        <div className='subpage-container'>
 
           {routes.map((route, idx) => (
             <Route
@@ -50,7 +50,7 @@ class NumberPage extends Component {
             />
           ))}
 
-        </Container>
+        </div>
       </div>
     );
   }

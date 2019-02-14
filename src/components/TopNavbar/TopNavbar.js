@@ -37,6 +37,7 @@ class TopNavbar extends Component {
       <NavItem key='topnav-left-1'>
         <NavLink tag={Link} to="/posts">Blog</NavLink>
       </NavItem>,
+      <span key='topnav-sep' style={{ margin: 'auto 5px auto 5px', color: 'rgba(255,255,255,.3)' }}>|</span>,
       <NavItem key='topnav-left-2'>
         <NavLink tag={Link} to="/strings/overview">Strings</NavLink>
       </NavItem>,
