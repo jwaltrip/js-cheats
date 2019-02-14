@@ -1,0 +1,21 @@
+.page-container {
+  display: grid;
+
+  grid-template-areas:
+    "nav content";
+
+  grid-template-columns: 200px 1fr;
+  /*grid-template-rows: auto 200px;*/
+  grid-gap: 10px;
+
+  height: calc(100vh - 81px);
+}
+
+nav {
+  grid-area: navs;
+}
+
+.subpage-container {
+  margin: 0 15px;
+  padding: 0 15px;
+}
