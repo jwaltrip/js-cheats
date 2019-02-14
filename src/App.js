@@ -12,7 +12,7 @@ import Home from "./components/Home/Home";
 import StringPage from "./components/StringPage/StringPage";
 import NumberPage from "./components/NumberPage/NumberPage";
 import ArrayPage from "./components/ArrayPage/ArrayPage";
-import { Container } from 'reactstrap';
+// import { Container } from 'reactstrap';
 
 class App extends Component {
   render() {
@@ -21,15 +21,14 @@ class App extends Component {
         <div>
           
           <TopNavbar />
-          <Container>
-            <Route exact path="/" component={ Home } />
-            <Route exact path="/register" component={ Register } />
-            <Route exact path="/login" component={ Login } />
-            <Route exact path="/posts" component={ PostContainer } />
-            <Route exact path="/strings" component={ StringPage } />
-            <Route exact path="/arrays" component={ ArrayPage } />
-            <Route exact path="/numbers" component={ NumberPage } />
-          </Container>
+
+          <Route exact path="/" component={ Home } />
+          <Route exact path="/register" component={ Register } />
+          <Route exact path="/login" component={ Login } />
+          <Route exact path="/posts" component={ PostContainer } />
+          <Route path="/strings" component={ StringPage } />
+          <Route path="/arrays" component={ ArrayPage } />
+          <Route path="/numbers" component={ NumberPage } />
         </div>
       </Router>
     );

@@ -18,13 +18,19 @@ const Home = (props) => {
       {props.auth.isAuthenticated ? loggedInContent : loggedOutContent}
       <Row>
         <Col xs={12} md={4}>
-          <Link to="/strings"><HomeCard title={'Strings'} description={'Become boss at javascript strings'} /></Link>
+          <Link to="/strings/overview">
+            <HomeCard title={'Strings'} description={'Become boss at javascript strings'} />
+          </Link>
         </Col>
         <Col xs={12} md={4}>
-          <Link to="/arrays"><HomeCard title={'Arrays'} description={'Become boss at javascript arrays'} /></Link>
+          <Link to="/arrays">
+            <HomeCard title={'Arrays'} description={'Become boss at javascript arrays'} />
+          </Link>
         </Col>
         <Col xs={12} md={4}>
-          <Link to="/numbers"><HomeCard title={'Numbers'} description={'Become boss at javascript numbers'} /></Link>
+          <Link to="/numbers">
+            <HomeCard title={'Numbers'} description={'Become boss at javascript numbers'} />
+          </Link>
         </Col>
       </Row>
     </div>

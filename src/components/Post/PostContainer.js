@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { fetchPosts, deletePost, createPost } from "../../actions/postActions";
 
-import { Row, Col } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
 
 import PostForm from './PostForm';
 import PostList from './PostList';
@@ -28,19 +28,21 @@ class PostContainer extends Component {
 
   render() {
     return (
-      <Row>
-        <Col xs={6}>
-          <PostForm
-            createPost={ this.props.createPost }
-          />
-        </Col>
-        <Col xs={6}>
-          <PostList
-            posts={ this.props.posts }
-            deletePost={ this.props.deletePost }
-          />
-        </Col>
-      </Row>
+      <Container>
+        <Row>
+          <Col xs={6}>
+            <PostForm
+              createPost={ this.props.createPost }
+            />
+          </Col>
+          <Col xs={6}>
+            <PostList
+              posts={ this.props.posts }
+              deletePost={ this.props.deletePost }
+            />
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }

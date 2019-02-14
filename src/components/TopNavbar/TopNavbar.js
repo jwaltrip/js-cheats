@@ -33,19 +33,28 @@ class TopNavbar extends Component {
   render() {
     const { isAuthenticated, user } = this.props.auth;
 
-    const postLink = (
-      <NavItem>
-        <NavLink tag={Link} to="/posts">Posts</NavLink>
-      </NavItem>
-    );
+    const leftNavLinks = [
+      <NavItem key='topnav-left-1'>
+        <NavLink tag={Link} to="/posts">Blog</NavLink>
+      </NavItem>,
+      <NavItem key='topnav-left-2'>
+        <NavLink tag={Link} to="/strings/overview">Strings</NavLink>
+      </NavItem>,
+      <NavItem key='topnav-left-3'>
+        <NavLink tag={Link} to="/numbers">Numbers</NavLink>
+      </NavItem>,
+      <NavItem key='topnav-left-4'>
+        <NavLink tag={Link} to="/arrays">Arrays</NavLink>
+      </NavItem>,
+    ];
 
     // this is utilizing fragments
     const authLinks = [
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <form key='auth-1' className="form-inline my-2 my-lg-0">
+        <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button className="btn btn-outline-success my-2 my-sm-0 mr-3" type="submit">Search</button>
       </form>,
-      <ul className="navbar-nav">
+      <ul key='auth-2' className="navbar-nav">
         <UncontrolledDropdown nav inNavbar>
           <DropdownToggle nav caret>
             <img
@@ -83,7 +92,7 @@ class TopNavbar extends Component {
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            {isAuthenticated ? postLink: null}
+            {isAuthenticated ? leftNavLinks: null}
           </Nav>
           <Nav className="ml-auto" navbar>
             {isAuthenticated ? authLinks : guestLinks}
