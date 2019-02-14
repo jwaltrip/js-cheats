@@ -9,7 +9,7 @@ import StrOverview from './sub-pages/StrOverview';
 import StrSubstr from './sub-pages/StrSubstr';
 import StrSplit from './sub-pages/StrSplit';
 
-// list of sidebar links
+// array of sidebar links to be passed as a prop to SideNavbar component
 // includes url path, name of link, and component to be rendered
 const routes = [
   {
