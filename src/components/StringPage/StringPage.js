@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './StringPage.css';
-import SideNavbar from "../SideNavbar/SideNavbar";
 // import PropTypes from 'prop-types';
 import { Container } from 'reactstrap';
 import { Route } from 'react-router-dom';
+import SideNavbar from "../SideNavbar/SideNavbar";
 // import sub-pages
 import StrOverview from './sub-pages/StrOverview';
 import StrSubstr from './sub-pages/StrSubstr';

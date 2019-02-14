@@ -44,7 +44,7 @@ class TopNavbar extends Component {
         <NavLink tag={Link} to="/numbers/overview">Numbers</NavLink>
       </NavItem>,
       <NavItem key='topnav-left-4'>
-        <NavLink tag={Link} to="/arrays">Arrays</NavLink>
+        <NavLink tag={Link} to="/arrays/overview">Arrays</NavLink>
       </NavItem>,
     ];
 

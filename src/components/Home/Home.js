@@ -23,13 +23,13 @@ const Home = (props) => {
           </Link>
         </Col>
         <Col xs={12} md={4}>
-          <Link to="/arrays">
-            <HomeCard title={'Arrays'} description={'Become boss at javascript arrays'} />
+          <Link to="/numbers/overview">
+            <HomeCard title={'Numbers'} description={'Become boss at javascript numbers'} />
           </Link>
         </Col>
         <Col xs={12} md={4}>
-          <Link to="/numbers/overview">
-            <HomeCard title={'Numbers'} description={'Become boss at javascript numbers'} />
+          <Link to="/arrays/overview">
+            <HomeCard title={'Arrays'} description={'Become boss at javascript arrays'} />
           </Link>
         </Col>
       </Row>
