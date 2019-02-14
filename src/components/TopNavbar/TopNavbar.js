@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./TopNavbar.css";
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -90,11 +91,14 @@ class TopNavbar extends Component {
     return (
       <Navbar color='dark' dark expand='lg' className="mb-4">
         <NavbarBrand tag={Link} to="/">JS Cheats</NavbarBrand>
+        <Nav className="mr-auto left-navbar-links" navbar>
+          {isAuthenticated ? leftNavLinks: null}
+        </Nav>
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
-          <Nav className="mr-auto" navbar>
-            {isAuthenticated ? leftNavLinks: null}
-          </Nav>
+          {/*<Nav className="mr-auto" navbar>*/}
+            {/*{isAuthenticated ? leftNavLinks: null}*/}
+          {/*</Nav>*/}
           <Nav className="ml-auto" navbar>
             {isAuthenticated ? authLinks : guestLinks}
           </Nav>
