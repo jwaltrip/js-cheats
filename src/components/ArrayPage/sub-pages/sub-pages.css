@@ -1,0 +1,16 @@
+.sublabel{
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.subtext{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.example{
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+}

@@ -9,6 +9,8 @@ import ArrOverview from './sub-pages/ArrOverview';
 import ArrForEach from './sub-pages/ArrForEach';
 import ArrMap from './sub-pages/ArrMap';
 import ArrFilter from './sub-pages/ArrFilter';
+import ArrPush from './sub-pages/ArrPush';
+import ArrJoin from './sub-pages/ArrJoin';
 
 // array of sidebar links to be passed as a prop to SideNavbar component
 // includes url path, name of link, and component to be rendered
@@ -36,6 +38,18 @@ const routes = [
     name: "filter()",
     exact: true,
     comp: ArrFilter
+  },
+  {
+    path: "/arrays/push",
+    name: "push()",
+    exact: true,
+    comp: ArrPush
+  },
+  {
+    path: "/arrays/join",
+    name: "join()",
+    exact: true,
+    comp: ArrJoin
   }
 ];
 
