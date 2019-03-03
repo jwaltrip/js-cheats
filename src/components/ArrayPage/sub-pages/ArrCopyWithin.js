@@ -1,12 +1,11 @@
 import React from "react";
-import "./sub-pages.css";
 // import PropTypes from 'prop-types';
 
-class ArrIncludes extends React.Component {
+class ArrCopyWithin extends React.Component {
   render() {
     return (
       <div>
-        <h1>.includes()</h1>
+        <h1>.copyWithin() </h1>
         <hr />
         <div className="sublabel">Description:</div>
         <p className="subtext" />
@@ -19,4 +18,4 @@ class ArrIncludes extends React.Component {
   }
 }
 
-export default ArrIncludes;
+export default ArrCopyWithin;

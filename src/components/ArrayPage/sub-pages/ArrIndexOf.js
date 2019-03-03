@@ -1,13 +1,11 @@
 import React from "react";
-import "./sub-pages.css";
 // import PropTypes from 'prop-types';
 
-class ArrIncludes extends React.Component {
+class ArrIndexOf extends React.Component {
   render() {
     return (
       <div>
-        <h1>.includes()</h1>
-        <hr />
+        <h1> .indexOf() </h1> <hr />
         <div className="sublabel">Description:</div>
         <p className="subtext" />
         <div className="sublabel">Syntax:</div>
@@ -19,4 +17,4 @@ class ArrIncludes extends React.Component {
   }
 }
 
-export default ArrIncludes;
+export default ArrIndexOf;

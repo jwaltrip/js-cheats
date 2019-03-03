@@ -1,17 +1,15 @@
 import React from "react";
-import "./sub-pages.css";
 // import PropTypes from 'prop-types';
 
-class ArrIncludes extends React.Component {
+class ArrLength extends React.Component {
   render() {
     return (
       <div>
-        <h1>.includes()</h1>
-        <hr />
+        <h1>.length() </h1> <hr />
         <div className="sublabel">Description:</div>
-        <p className="subtext" />
+        <p className="subtext">Returns the length of an Array.</p>
         <div className="sublabel">Syntax:</div>
-        <p className="subtext" />
+        <p className="subtext">arr.length("separator")</p>
         <div className="sublabel">Example:</div>
         <div className="example" />
       </div>
@@ -19,4 +17,4 @@ class ArrIncludes extends React.Component {
   }
 }
 
-export default ArrIncludes;
+export default ArrLength;
