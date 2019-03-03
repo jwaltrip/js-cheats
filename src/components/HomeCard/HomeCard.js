@@ -1,16 +1,30 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
-import { Card, CardText, CardBody, CardTitle } from 'reactstrap';
+import strings from './notebook.gif';
+import arrays from './arraysNotebook.gif';
+import numbers from './numbersNotebook.gif';
+import "./HomeCard.css";
+import { Card, CardText, CardBody, CardTitle, CardImg } from 'reactstrap';
 
 const HomeCard = (props) => {
-  const { title, description } = props;
+  const { title, description, cardType } = props;
+
+  let cardImg = "";
+  if (props.title === "Strings") {
+    cardImg = <CardImg top src={strings} alt="strings" width="100%" />;
+  } else if (props.title === "Arrays") {
+    cardImg = <CardImg top src={arrays} alt="arrays" width="100%" />;
+  } else if (props.title === "Numbers") {
+    cardImg = <CardImg top src={numbers} alt="numbers" width="100%" />;
+  }
 
   return (
-    <Card>
+    <Card className="cards">
+      {cardImg}
       <CardBody>
-        <CardTitle>{title}</CardTitle>
+        <CardTitle className="cardTitle">{title}</CardTitle>
         {/*<CardSubtitle>Card subtitle</CardSubtitle>*/}
-        <CardText>{description}</CardText>
+        <CardText className="cardText">{description}</CardText>
       </CardBody>
     </Card>
   );
