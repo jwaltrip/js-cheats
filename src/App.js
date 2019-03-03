@@ -24,7 +24,7 @@ class App extends Component {
             <Route exact path="/" component={ Home } />
             <Route exact path="/register" component={ Register } />
             <Route exact path="/login" component={ Login } />
-            <Route exact path="/posts" component={ PostContainer } />
+            <Route exact path="/blog" component={ PostContainer } />
             <Route path="/strings" component={ StringPage } />
             <Route path="/arrays" component={ ArrayPage } />
             <Route path="/numbers" component={ NumberPage } />
