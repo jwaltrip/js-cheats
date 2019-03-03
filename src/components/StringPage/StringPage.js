@@ -8,6 +8,12 @@ import SideNavbar from "../SideNavbar/SideNavbar";
 import StrOverview from './sub-pages/StrOverview';
 import StrSubstr from './sub-pages/StrSubstr';
 import StrSplit from './sub-pages/StrSplit';
+import StrSlice from './sub-pages/StrSlice';
+import StrSubString from './sub-pages/StrSubString';
+import StrStartsWith from './sub-pages/StrStartsWith';
+import StrSearch from './sub-pages/StrSearch';
+import StrCharAt from './sub-pages/StrCharAt';
+import StrConcat from './sub-pages/StrConcat';
 import StrValue from './sub-pages/StrValue';
 
 // array of sidebar links to be passed as a prop to SideNavbar component
@@ -20,6 +26,18 @@ const routes = [
     comp: StrOverview
   },
   {
+    path: "/strings/charAt",
+    name: "charAt()",
+    exact: true,
+    comp: StrCharAt
+  },
+  {
+    path: "/strings/concat",
+    name: "concat()",
+    exact: true,
+    comp: StrConcat
+  },
+  {
     path: "/strings/substr",
     name: "substr()",
     exact: true,
@@ -30,6 +48,30 @@ const routes = [
     name: "split()",
     exact: true,
     comp: StrSplit
+  },
+  {
+    path: "/strings/slice",
+    name: "slice()",
+    exact: true,
+    comp: StrSlice
+  },
+  {
+    path: "/strings/substring",
+    name: "substring()",
+    exact: true,
+    comp: StrSubString
+  },
+  {
+    path: "/strings/startswith",
+    name: "startsWith()",
+    exact: true,
+    comp: StrStartsWith
+  },
+  {
+    path: "/strings/search",
+    name: "search()",
+    exact: true,
+    comp: StrSearch
   },
   {
     path: "/strings/value",

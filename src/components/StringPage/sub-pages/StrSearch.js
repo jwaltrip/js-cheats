@@ -2,25 +2,22 @@ import React from 'react';
 import "./sub-pages.css";
 // import PropTypes from 'prop-types';
 
-class StrSubstr extends React.Component {
+class StrSearch extends React.Component {
   render() {
     return (
       <div>
-        <h1>.substr()</h1>
+        <h1>.search()</h1>
         <hr/>
         <div className="sublabel">Description:</div>
-        <p className="subtext">Extracts parts of a string, beginning at the character at the specified position, and it returns the specified number of characters.
+        <p className="subtext">Searches a string for a specified value, and returns the position of the match.
           <ul> 
-            <li>To extract from the end of a string; use negative numbers.</li>
-            <li>Does not change the orginal string.</li>
+            <li>Search value can be a string or a regular expression.</li>
+            <li>Return - 1 if no match is found.</li>
           </ul> 
         </p>
         <div className="sublabel">Syntax:</div>
-        <p className="subtext">string.substr(start, length) 
-          <ul>
-            <li>Length - Number of characters to extract, it is also optional not required.</li>
-           
-          </ul>
+        <p className="subtext">string.search(search value) 
+          <ul></ul>
           </p>
         <div className="sublabel">Example:</div>
         <div className="example">
@@ -31,4 +28,4 @@ class StrSubstr extends React.Component {
   }
 }
 
-export default StrSubstr;
+export default StrSearch;
