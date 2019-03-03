@@ -2,23 +2,23 @@ import React from 'react';
 import "./sub-pages.css";
 // import PropTypes from 'prop-types';
 
-class StrSubstr extends React.Component {
+class StrStartsWith extends React.Component {
   render() {
     return (
       <div>
-        <h1>.substr()</h1>
+        <h1>.startsWith()</h1>
         <hr/>
         <div className="sublabel">Description:</div>
-        <p className="subtext">Extracts parts of a string, beginning at the character at the specified position, and it returns the specified number of characters.
+        <p className="subtext">Determines whether a string begins with the characters of a specified string.
           <ul> 
-            <li>To extract from the end of a string; use negative numbers.</li>
-            <li>Does not change the orginal string.</li>
+            <li>Method returns true if the string begins with the characters, and false if not.</li>
+            <li>Case Senistive</li>
           </ul> 
         </p>
         <div className="sublabel">Syntax:</div>
-        <p className="subtext">string.substr(start, length) 
+        <p className="subtext">string.startsWith( search value , start) 
           <ul>
-            <li>Length - Number of characters to extract, it is also optional not required.</li>
+            <li>Start - Optional not required, and the default is 0.</li>
            
           </ul>
           </p>
@@ -31,4 +31,4 @@ class StrSubstr extends React.Component {
   }
 }
 
-export default StrSubstr;
+export default StrStartsWith;
