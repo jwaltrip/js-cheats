@@ -7,15 +7,14 @@ import { Row, Col } from 'reactstrap';
 
 const Home = (props) => {
   const loggedOutContent = <p><Link to="/register">Register</Link> or <Link to="/login">Log in</Link> to see the Posts!</p>;
-  const loggedInContent = <p>Have any questions? Check out our <Link to="/posts">Blog!</Link></p>;
+  const loggedInContent = <p>Have any questions? Check out our <Link to="/blog">Blog!</Link></p>;
 
   return (
     <div className="container">
       <h1>Javascript Bible</h1>
-      <ul> And on the 7th day he said let there be cheats - Genesis 1:27 </ul>
+      <p> And on the 7th day he said let there be cheats - Genesis 1:27 </p>
 
       <hr/>
-      {props.auth.isAuthenticated ? loggedInContent : loggedOutContent}
       <Row>
         <Col xs={12} md={4}>
           <Link to="/strings/overview">
@@ -33,6 +32,8 @@ const Home = (props) => {
           </Link>
         </Col>
       </Row>
+      <hr/>
+      {loggedInContent}
     </div>
   );
 };
