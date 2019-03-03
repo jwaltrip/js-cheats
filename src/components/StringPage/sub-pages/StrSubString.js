@@ -2,25 +2,22 @@ import React from 'react';
 import "./sub-pages.css";
 // import PropTypes from 'prop-types';
 
-class StrSubstr extends React.Component {
+class StrSubString extends React.Component {
   render() {
     return (
       <div>
-        <h1>.substr()</h1>
+        <h1>.substring()</h1>
         <hr/>
         <div className="sublabel">Description:</div>
-        <p className="subtext">Extracts parts of a string, beginning at the character at the specified position, and it returns the specified number of characters.
+        <p className="subtext">Extracts the characters from a string, between two specified indices, and returns the new substring. 
           <ul> 
-            <li>To extract from the end of a string; use negative numbers.</li>
-            <li>Does not change the orginal string.</li>
+            <li>Extracts the characters in a string between "start" and "end", not including "end" itself.</li>
+            <li>Does not change the original string.</li>
           </ul> 
         </p>
         <div className="sublabel">Syntax:</div>
-        <p className="subtext">string.substr(start, length) 
-          <ul>
-            <li>Length - Number of characters to extract, it is also optional not required.</li>
-           
-          </ul>
+        <p className="subtext">string.substring(start, end) 
+          <ul></ul>
           </p>
         <div className="sublabel">Example:</div>
         <div className="example">
@@ -31,4 +28,4 @@ class StrSubstr extends React.Component {
   }
 }
 
-export default StrSubstr;
+export default StrSubString;
