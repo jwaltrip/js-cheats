@@ -13,6 +13,14 @@ import ArrPush from './sub-pages/ArrPush';
 import ArrJoin from './sub-pages/ArrJoin';
 import ArrConcat from './sub-pages/ArrConcat';
 import ArrIncludes from './sub-pages/ArrIncludes';
+import ArrString from './sub-pages/ArrString';
+import ArrSort from './sub-pages/ArrSort';
+import ArrSplice from './sub-pages/ArrSplice';
+import ArrSlice from './sub-pages/ArrSlice';
+import ArrLastIndex from './sub-pages/ArrLastIndex';
+import ArrUnshift from './sub-pages/ArrUnshift';
+import ArrPop from './sub-pages/ArrPop';
+import ArrValue from './sub-pages/ArrValue';
 
 // array of sidebar links to be passed as a prop to SideNavbar component
 // includes url path, name of link, and component to be rendered
@@ -64,6 +72,54 @@ const routes = [
     name: "includes()",
     exact: true,
     comp: ArrIncludes
+  },
+  {
+    path: "/arrays/toString",
+    name: "toString()",
+    exact: true,
+    comp: ArrString
+  },
+  {
+    path: "/arrays/sort",
+    name: "sort()",
+    exact: true,
+    comp: ArrSort
+  },
+  {
+    path: "/arrays/splice",
+    name: "splice()",
+    exact: true,
+    comp: ArrSplice
+  },
+  {
+    path: "/arrays/slice",
+    name: "slice()",
+    exact: true,
+    comp: ArrSlice
+  },
+  {
+    path: "/arrays/lastIndexOf",
+    name: "lastIndexOf()",
+    exact: true,
+    comp: ArrLastIndex
+  },
+  {
+    path: "/arrays/unshift",
+    name: "unshift()",
+    exact: true,
+    comp: ArrUnshift
+  },
+  {
+    path: "/arrays/pop",
+    name: "pop()",
+    exact: true,
+    comp: ArrPop
+  },
+  {
+    path: "/arrays/value",
+    name: "valueOf()",
+    exact: true,
+    comp: ArrValue
   }
 ];
 

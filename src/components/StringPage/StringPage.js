@@ -14,6 +14,7 @@ import StrStartsWith from './sub-pages/StrStartsWith';
 import StrSearch from './sub-pages/StrSearch';
 import StrCharAt from './sub-pages/StrCharAt';
 import StrConcat from './sub-pages/StrConcat';
+import StrValue from './sub-pages/StrValue';
 
 // array of sidebar links to be passed as a prop to SideNavbar component
 // includes url path, name of link, and component to be rendered
@@ -71,6 +72,12 @@ const routes = [
     name: "search()",
     exact: true,
     comp: StrSearch
+  },
+  {
+    path: "/strings/value",
+    name: "valueOf()",
+    exact: true,
+    comp: StrValue
   }
 ];
 
