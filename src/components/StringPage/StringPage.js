@@ -8,6 +8,7 @@ import SideNavbar from "../SideNavbar/SideNavbar";
 import StrOverview from './sub-pages/StrOverview';
 import StrSubstr from './sub-pages/StrSubstr';
 import StrSplit from './sub-pages/StrSplit';
+import StrValue from './sub-pages/StrValue';
 
 // array of sidebar links to be passed as a prop to SideNavbar component
 // includes url path, name of link, and component to be rendered
@@ -29,6 +30,12 @@ const routes = [
     name: "split()",
     exact: true,
     comp: StrSplit
+  },
+  {
+    path: "/strings/value",
+    name: "valueOf()",
+    exact: true,
+    comp: StrValue
   }
 ];
 
