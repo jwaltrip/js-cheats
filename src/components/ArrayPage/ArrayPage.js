@@ -1,14 +1,8 @@
-import React, {
-  Component
-} from "react";
+import React, { Component } from "react";
 import "./ArrayPage.css";
 // import PropTypes from 'prop-types';
-import {
-  Container
-} from "reactstrap";
-import {
-  Route
-} from "react-router-dom";
+import { Container } from "reactstrap";
+import { Route } from "react-router-dom";
 import SideNavbar from "../SideNavbar/SideNavbar";
 // import sub-pages
 import ArrOverview from "./sub-pages/ArrOverview";
@@ -27,7 +21,8 @@ import ArrCopyWithin from "./sub-pages/ArrCopyWithin";
 
 // array of sidebar links to be passed as a prop to SideNavbar component
 // includes url path, name of link, and component to be rendered
-const routes = [{
+const routes = [
+  {
     path: "/arrays/overview",
     name: "Arrays Overview",
     exact: true,
@@ -109,32 +104,21 @@ const routes = [{
 
 class ArrayPage extends Component {
   render() {
-    return ( <
-      div className = "page-container" >
-      <
-      SideNavbar routes = {
-        routes
-      }
-      /> <
-      div className = "subpage-container" > {
-        routes.map((route, idx) => ( <
-          Route key = {
-            idx
-          }
-          exact = {
-            route.exact
-          }
-          path = {
-            route.path
-          }
-          component = {
-            route.comp
-          }
-          />
-        ))
-      } <
-      /div>{" "} <
-      /div>
+    return (
+      <div className="page-container">
+        <SideNavbar routes={routes} />{" "}
+        <div className="subpage-container">
+          {" "}
+          {routes.map((route, idx) => (
+            <Route
+              key={idx}
+              exact={route.exact}
+              path={route.path}
+              component={route.comp}
+            />
+          ))}{" "}
+        </div>{" "}
+      </div>
     );
   }
 }
