@@ -7,8 +7,30 @@ class ArrMap extends React.Component {
       <div>
         <h1>.map()</h1>
         <hr />
-
-        <p>Put yo desc here and style how ya want.</p>
+        <div className="sublabel">Description:</div>
+        <p className="subtext">
+          The map() method creates a new array with the results of calling a
+          provided function on every element in the calling array.
+        </p>
+        <div className="sublabel">Syntax:</div>
+        <p className="subtext">
+          <pre>{`var new_array = arr.map(function callback(currentValue[, index[, array]]) {
+    // Return element for new_array
+}[, thisArg])`}</pre>
+        </p>
+        <div className="sublabel">Example:</div>
+        <div className="example">
+          <iframe
+            height="400px"
+            width="100%"
+            src="https://repl.it/@William_Cruz/QuaintEnormousTriangle?lite=true"
+            scrolling="no"
+            frameborder="no"
+            allowtransparency="true"
+            allowfullscreen="true"
+            sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"
+          />
+        </div>
       </div>
     );
   }
