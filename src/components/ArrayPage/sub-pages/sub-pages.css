@@ -1,16 +1,25 @@
-.sublabel{
+.sublabel {
     font-size: 22px;
     font-weight: 600;
     margin-top: 20px;
 }
 
-.subtext{
+.subtext {
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-.example{
+.example {
     margin-top: 20px;
     margin-bottom: 40px;
     margin-right: 75px;
+}
+
+p.ex1 {
+    max-width: 500px;
+}
+
+h2 {
+    font-family: "Palatino Linotype", serif;
+    font-weight: bold;
 }

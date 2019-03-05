@@ -1,13 +1,13 @@
 import React from "react";
 import "./sub-pages.css";
-import Gist from 'react-gist';
+//import Gist from 'react-gist';
 // import PropTypes from 'prop-types';
 
 class ArrPush extends React.Component {
   render() {
     return (
       <div>
-        <h1>.push() </h1> <hr />
+        <h1> .push() </h1> <hr />
         <div className="sublabel"> Description: </div>{" "}
         <p className="subtext">
           {" "}
