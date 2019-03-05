@@ -8,7 +8,7 @@ class ArrOverview extends React.Component {
         <h1>Javascript Arrays Overview</h1>
         <hr/>
 
-        <p>How in the absolute fuck do I do somethin with a javascript array???</p>
+        <p>JavaScript arrays are used to store multiple values in a single variable. An array is a special variable, which can hold more than one value at a time.</p>
       </div>
     );
   }

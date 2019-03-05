@@ -1,20 +1,18 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 
-class NumIsInteger extends React.Component {
+class NumToPrecision extends React.Component {
   render() {
     return (
       <div>
-      <h1>.isInteger()</h1>
+      <h1>.toPrecision()</h1>
         <hr/>
         <div className="sublabel">Description:</div>
-        <p className="subtext">The method determines whether a value an integer.
-          <ul> 
-            <li>The method also returns true if the value is of the type Number, and an integer (a number without decimals). Otherwise it returns false.</li>
-          </ul> 
+        <p className="subtext">The method returns a string, with a number written with a specified length.
+          <ul></ul> 
         </p>
         <div className="sublabel">Syntax:</div>
-        <p className="subtext">.isInteger( number) 
+        <p className="subtext">number.toPrecision ( number) 
           <ul>
               <li>Number - Required.</li>
           </ul>
@@ -28,4 +26,4 @@ class NumIsInteger extends React.Component {
   }
 }
 
-export default NumIsInteger;
+export default NumToPrecision;

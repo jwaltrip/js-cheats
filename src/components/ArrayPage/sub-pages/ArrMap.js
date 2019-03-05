@@ -8,7 +8,7 @@ class ArrMap extends React.Component {
         <h1>.map()</h1>
         <hr />
 
-        <p>Put yo desc here and style how ya want.</p>
+        <p></p>
       </div>
     );
   }

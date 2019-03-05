@@ -1,20 +1,20 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 
-class NumIsInteger extends React.Component {
+class NumNumber extends React.Component {
   render() {
     return (
       <div>
-      <h1>.isInteger()</h1>
+      <h1>.Number()</h1>
         <hr/>
         <div className="sublabel">Description:</div>
-        <p className="subtext">The method determines whether a value an integer.
+        <p className="subtext">The method can be used to convert JavaScript variables to numbers.
           <ul> 
-            <li>The method also returns true if the value is of the type Number, and an integer (a number without decimals). Otherwise it returns false.</li>
+            <li>The method can also convert a date to a number.</li>
           </ul> 
         </p>
         <div className="sublabel">Syntax:</div>
-        <p className="subtext">.isInteger( number) 
+        <p className="subtext">.Number( number) 
           <ul>
               <li>Number - Required.</li>
           </ul>
@@ -28,4 +28,4 @@ class NumIsInteger extends React.Component {
   }
 }
 
-export default NumIsInteger;
+export default NumNumber;

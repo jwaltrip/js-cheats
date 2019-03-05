@@ -8,7 +8,7 @@ class ArrForEach extends React.Component {
         <h1>.forEach()</h1>
         <hr />
 
-        <p>Put yo desc here and style how ya want.</p>
+        <p></p>
       </div>
     );
   }

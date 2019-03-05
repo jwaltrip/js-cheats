@@ -6,7 +6,7 @@ class ArrFilter extends React.Component {
     return (
       <div>
         <h1>.filter() </h1> <hr />
-        <p> Put yo desc here and style how ya want. </p>{" "}
+        <p></p>{" "}
       </div>
     );
   }
