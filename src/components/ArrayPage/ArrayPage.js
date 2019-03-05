@@ -184,9 +184,7 @@ class ArrayPage extends Component {
           }
           />
         ))
-      } <
-      /div>{" "} <
-      /div>
+      } </div>{" "} </div>
     );
   }
 }

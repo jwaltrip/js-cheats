@@ -10,6 +10,9 @@ class StrValue extends React.Component {
         <hr/>
         <div className="sublabel">Description:</div>
         <p className="subtext">This method returns the primitive value of a string object.</p>
+        <ul></ul>
+        <div className="sublabel">Syntax:</div>
+        <ul></ul>
         <p className="subtext">string.valueOf()</p>
         <div className="sublabel">Example:</div>
         <div className="example">
