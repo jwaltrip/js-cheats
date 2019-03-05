@@ -5,7 +5,7 @@ class NumToExponentail extends React.Component {
   render() {
     return (
       <div>
-      <h1>.toExpoenentail()</h1>
+      <h1>.toExponentail()</h1>
         <hr/>
         <div className="sublabel">Description:</div>
         <p className="subtext">The method returns a string, with a number rounded and written using exponential notation.
@@ -14,15 +14,14 @@ class NumToExponentail extends React.Component {
           </ul> 
         </p>
         <div className="sublabel">Syntax:</div>
-        <p className="subtext">number.toExpoenentail ( number) 
+        <p className="subtext">number.toExponentail ( number) 
           <ul>
               <li>Number - Required.</li>
           </ul>
           </p>
         <div className="sublabel">Example:</div>
         <div className="example">
-            <iframe height="425px" width="100%" src="https://repl.it/@sarahcheatham/join-example?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-        </div>
+            <iframe height="400px" width="100%" src="https://repl.it/@Zgutier5/toExpoenentail?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>        </div>
       </div>
     );
   }
