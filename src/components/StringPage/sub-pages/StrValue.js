@@ -16,6 +16,7 @@ class StrValue extends React.Component {
         <p className="subtext">string.valueOf()</p>
         <div className="sublabel">Example:</div>
         <div className="example">
+          <iframe height="400px" width="100%" src="https://repl.it/@Zgutier5/valueof?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
         </div>
       </div>
     );

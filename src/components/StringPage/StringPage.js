@@ -23,6 +23,7 @@ import StrMatch from './sub-pages/StrMatch';
 import StrLastIndexOf from './sub-pages/StrLastIndexOf';
 import StrIncludes from './sub-pages/StrIncludes';
 import StrReplace from './sub-pages/StrReplace';
+import StrLength from './sub-pages/StrLength';
 
 // array of sidebar links to be passed as a prop to SideNavbar component
 // includes url path, name of link, and component to be rendered
@@ -62,6 +63,12 @@ const routes = [
     name: "lastIndexOf()",
     exact: true,
     comp: StrLastIndexOf
+  },
+  {
+    path: "/strings/length",
+    name: "length",
+    exact: true,
+    comp: StrLength
   },
   {
     path: "/strings/match",
