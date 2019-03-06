@@ -24,8 +24,7 @@ class StrSubstr extends React.Component {
           </p>
         <div className="sublabel">Example:</div>
         <div className="example">
-            <iframe height="425px" width="100%" src="https://repl.it/@sarahcheatham/join-example?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-        </div>
+          <iframe height="400px" width="100%" src="https://repl.it/@Zgutier5/substr?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>        </div>
       </div>
     );
   }
