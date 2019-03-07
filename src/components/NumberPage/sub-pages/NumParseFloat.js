@@ -4,7 +4,7 @@ import React from 'react';
 class NumParseFloat extends React.Component {
   render() {
     return (
-      <div>
+    <div>
       <h1>.parseFloat()</h1>
         <hr/>
         <div className="sublabel">Description:</div>
@@ -21,8 +21,9 @@ class NumParseFloat extends React.Component {
           </p>
         <div className="sublabel">Example:</div>
         <div className="example">
-            <iframe height="400px" width="100%" src="https://repl.it/@Zgutier5/parseFloat?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>        </div>
-      </div>
+            <iframe height="400px" width="100%" src="https://repl.it/@Zgutier5/parseFloat?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+        </div>
+    </div>
     );
   }
 }
