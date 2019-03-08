@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 // import bootstrap css
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/highlight.js/styles/default.css';
 // import example post components
 import PostContainer from './components/Post/PostContainer';
 import TopNavbar from "./components/TopNavbar/TopNavbar";

@@ -1,26 +1,41 @@
-import React from 'react';
+import React from "react";
+import Highlight from 'react-highlight';
 import "./sub-pages.css";
-// import PropTypes from 'prop-types';
 
 class StrConcat extends React.Component {
   render() {
     return (
       <div>
         <h1>.concat()</h1>
-        <hr/>
+        <hr />
         <div className="sublabel">Description:</div>
-        <p className="subtext">This function joins two or more strings together.
-          <ul> 
-            <li>This method does not change the existings strings, but returns a new string containing the text of the joined strings.</li>
-          </ul> 
+        <p className="subtext">
+          This function joins two or more strings together.
         </p>
+        <ul>
+          <li>
+            This method does not change the existings strings, but returns a
+            new string containing the text of the joined strings.
+          </li>
+        </ul>
         <div className="sublabel">Syntax:</div>
-        <p className="subtext">string.concat(string1, string2, ...stringX) 
-          <ul></ul>
-          </p>
+        <div style={{ maxWidth: 600, marginTop: 20 }}>
+          <Highlight className='javascript'>
+            {"string.concat(string1, string2, ...stringX)"}
+          </Highlight>
+        </div>
         <div className="sublabel">Example:</div>
         <div className="example">
-            <iframe height="400px" width="100%" src="https://repl.it/@Zgutier5/concat?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>        </div>
+          <iframe
+            height="400px"
+            width="100%"
+            src="https://repl.it/@Zgutier5/concat?lite=true"
+            scrolling="no"
+            frameBorder="no"
+            allowFullScreen={true}
+            sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"
+          />
+        </div>
       </div>
     );
   }

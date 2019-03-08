@@ -10,7 +10,12 @@
 }
 
 .example{
-    margin-top: 20px;
-    margin-bottom: 40px;
-    margin-right: 75px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  margin-right: 75px;
+}
+
+code {
+  background: #F0F0F0;
+  padding: 5px;
 }
