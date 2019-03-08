@@ -7,7 +7,6 @@ class ArrOverview extends React.Component {
     return (
       <div>
         <h1> Javascript Arrays Overview </h1> <hr />
-        <h2>ARRAY</h2>
         <p className="ex1">
           An array is an ordered collection of data (either primitive or object
           depending upon the language). Arrays are used to store multiple values

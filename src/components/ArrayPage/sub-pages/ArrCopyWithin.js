@@ -9,8 +9,7 @@ class ArrCopyWithin extends React.Component {
         <hr />
         <div className="sublabel">Description:</div>
         <p className="subtext">
-          Copies array elements within the array, to and from specified
-          positions.
+          Copies array elements within the array, to and from specified positions.
         </p>
         <div className="sublabel">Syntax:</div>
         <p className="subtext">
@@ -34,9 +33,9 @@ class ArrCopyWithin extends React.Component {
             width="100%"
             src="https://repl.it/@William_Cruz/ExtrovertedPungentRule?lite=true"
             scrolling="no"
-            frameborder="no"
-            allowtransparency="true"
-            allowfullscreen="true"
+            frameBorder="no"
+            allowTransparency="true"
+            allowFullScreen="true"
             sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"
           />
         </div>

@@ -90,11 +90,11 @@ class TopNavbar extends Component {
     ];
 
     const guestLinks = [
-      <form key='auth-1' className="form-inline my-2 my-lg-0">
+      <form key='noauth-1' className="form-inline my-2 my-lg-0">
         <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
         <button className="btn btn-outline-success my-2 my-sm-0 mr-3" type="submit">Search</button>
       </form>,
-      <ul className="navbar-nav">
+      <ul key='noauth-2' className="navbar-nav">
         <NavItem>
           <NavLink tag={Link} to="/register">Register</NavLink>
         </NavItem>
