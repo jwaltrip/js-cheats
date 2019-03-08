@@ -1,6 +1,5 @@
 import React from "react";
 import "./sub-pages.css";
-// import PropTypes from 'prop-types';
 
 class ArrConcat extends React.Component {
   render() {
@@ -21,13 +20,12 @@ class ArrConcat extends React.Component {
         <div className="sublabel"> Example: </div>{" "}
         <div className="example">
           <iframe
+            title="array_concat"
             height="400px"
             width="100%"
             src="https://repl.it/@sarahcheatham/concat-array-example?lite=true"
             scrolling="no"
-            frameborder="no"
-            allowtransparency="true"
-            allowfullscreen="true"
+            frameBorder="no"
             sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"
           >
             {" "}
