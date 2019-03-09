@@ -1,30 +1,51 @@
-import React from 'react';
+import React from "react";
+import Highlight from "react-highlight";
+import { Badge } from "reactstrap";
 import "./sub-pages.css";
-// import PropTypes from 'prop-types';
 
 class StrSplit extends React.Component {
   render() {
     return (
       <div>
         <h1>.split()</h1>
-        <hr/>
+        <hr />
         <div className="sublabel">Description:</div>
-        <p className="subtext">Used to split a string into an array of substrings, and returns the new array.
-          <ul> 
-            <li>If an empty string ("") is used as the seperator, the string is split between each character.</li>
-            <li>Does not change the original string.</li>
-          </ul> 
+        <p className="subtext">
+          Used to split a string into an array of substrings by a specified delimiter, and returns the new array
         </p>
+        <ul>
+          <li>
+            If an empty string <code>""</code> is used as the delimiter, the string is split between each character
+          </li>
+          <li>Does not change the original string</li>
+        </ul>
         <div className="sublabel">Syntax:</div>
-        <p className="subtext">string.split(separator, limit) "Both separator and limit are optional"
-          <ul>
-            <li>Seperator - Specifies the character the use for splitting the string</li>
-            <li>Limit - Integer that specifies the number of splits, items after not included</li>
-          </ul>
-          </p>
+        <div className="syntax">
+          <Highlight className='javascript'>
+            {"string.split(separator, limit)"}
+          </Highlight>
+        </div>
+        <ul>
+          <li>
+            <code>seperator</code> - <Badge color="secondary">optional</Badge> specifies the character where the string will be split
+          </li>
+          <li>
+            <code>limit</code> - <Badge color="secondary">optional</Badge> integer that specifies the number of splits, items after not included
+          </li>
+        </ul>
         <div className="sublabel">Example:</div>
         <div className="example">
-          <iframe height="400px" width="100%" src="https://repl.it/@Zgutier5/split?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>        </div>
+          <iframe
+            title="string-split"
+            height="400px"
+            width="100%"
+            src="https://repl.it/@Zgutier5/split?lite=true"
+            scrolling="no"
+            frameBorder="no"
+            allowFullScreen={true}
+            sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"
+          />
+        </div>
       </div>
     );
   }

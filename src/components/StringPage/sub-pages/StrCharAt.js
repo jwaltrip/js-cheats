@@ -13,11 +13,11 @@ class StrCharAt extends React.Component {
           Returns the characters at the specified index in a string
         </p>
         <ul>
-          <li>Index of the first character is <code>0</code>.</li>
-          <li>Index of the last character is <code>string.length - 1</code>.</li>
+          <li>Index of the first character is <code>0</code></li>
+          <li>Index of the last character is <code>string.length - 1</code></li>
         </ul>
         <div className="sublabel">Syntax:</div>
-        <div style={{ maxWidth: 600, marginTop: 20 }}>
+        <div className="syntax">
           <Highlight className='javascript'>
             {"string.charAt(index)"}
           </Highlight>

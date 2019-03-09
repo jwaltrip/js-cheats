@@ -19,7 +19,7 @@ class StrConcat extends React.Component {
           </li>
         </ul>
         <div className="sublabel">Syntax:</div>
-        <div style={{ maxWidth: 600, marginTop: 20 }}>
+        <div className="syntax">
           <Highlight className='javascript'>
             {"string.concat(string1, string2, ...stringX)"}
           </Highlight>

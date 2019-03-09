@@ -15,7 +15,12 @@
   margin-right: 75px;
 }
 
+.syntax {
+  max-width: 600px;
+  margin-top: 20px;
+}
+
 code {
   background: #F0F0F0;
-  padding: 5px;
+  padding: 3px 5px 3px 5px;
 }
