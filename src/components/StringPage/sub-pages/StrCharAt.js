@@ -1,5 +1,6 @@
 import React from "react";
 import Highlight from 'react-highlight';
+import { Badge } from 'reactstrap';
 import "./sub-pages.css";
 
 class StrCharAt extends React.Component {
@@ -22,9 +23,15 @@ class StrCharAt extends React.Component {
             {"string.charAt(index)"}
           </Highlight>
         </div>
+        <ul>
+          <li>
+            <code>index</code> - <Badge color="primary">required</Badge>
+          </li>
+        </ul>
         <div className="sublabel">Example:</div>
         <div className="example">
           <iframe
+            title="string-charAt"
             height="400px"
             width="100%"
             src="https://repl.it/@Zgutier5/charAt?lite=true"

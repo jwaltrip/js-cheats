@@ -36,6 +36,7 @@ class StrEndsWith extends React.Component {
         <div className="sublabel">Example:</div>
         <div className="example">
           <iframe
+            title="string-endsWith"
             height="400px"
             width="100%"
             src="https://repl.it/@Zgutier5/endsWtih?lite=true"
