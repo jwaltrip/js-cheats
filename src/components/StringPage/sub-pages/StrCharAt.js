@@ -1,27 +1,46 @@
-import React from 'react';
+import React from "react";
+import Highlight from 'react-highlight';
+import { Badge } from 'reactstrap';
 import "./sub-pages.css";
-// import PropTypes from 'prop-types';
 
 class StrCharAt extends React.Component {
   render() {
     return (
       <div>
         <h1>.charAt()</h1>
-        <hr/>
+        <hr />
         <div className="sublabel">Description:</div>
-        <p className="subtext">Returns the characters at the specified index in a string
-          <ul> 
-            <li>Index of the first character is 0.</li>
-            <li>Index of the last character is string.length - 1.</li>
-          </ul> 
+        <p className="subtext">
+          Returns the characters at the specified index in a string
         </p>
+        <ul>
+          <li>Index of the first character is <code>0</code></li>
+          <li>Index of the last character is <code>string.length - 1</code></li>
+        </ul>
         <div className="sublabel">Syntax:</div>
-        <p className="subtext">string.charAt(index) 
-          <ul></ul>
-          </p>
+        <div className="syntax">
+          <Highlight className='javascript'>
+            {"string.charAt(index)"}
+          </Highlight>
+        </div>
+        <ul>
+          <li>
+            <code>index</code> - <Badge color="primary">required</Badge>
+          </li>
+        </ul>
         <div className="sublabel">Example:</div>
         <div className="example">
-            <iframe height="400px" width="100%" src="https://repl.it/@Zgutier5/charAt?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>        </div>
+          <iframe
+            title="string-charAt"
+            height="400px"
+            width="100%"
+            src="https://repl.it/@Zgutier5/charAt?lite=true"
+            scrolling="no"
+            frameBorder="no"
+            allowFullScreen={true}
+            sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"
+          />
+        </div>
       </div>
     );
   }
