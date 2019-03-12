@@ -7,14 +7,18 @@ const apiUrl = '/posts';
 // redux action to fetch all posts from the DB
 export const fetchPosts = () => dispatch => {
   axios(apiUrl)
-    .then(posts => dispatch({
-      type: FETCH_POSTS,
-      payload: posts.data
-    }))
+    .then(posts => {
+      dispatch(fetchPostsSuccess(posts));
+    })
     .catch(err => {
-      throw(err);
+      throw (err);
     });
 };
+
+export const fetchPostsSuccess = (posts) => ({
+  type: FETCH_POSTS,
+  payload: posts.data
+});
 
 // redux action to add a post to the DB
 // the return payload is the most recently added post object
