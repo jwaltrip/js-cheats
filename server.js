@@ -46,3 +46,5 @@ app.get("*", (req, res) => {
 app.listen(port, () => {
   console.log(`Backend server running and listening on port ${port}`);
 });
+
+module.exports = app;

@@ -14,7 +14,6 @@
     "gravatar": "^1.8.0",
     "jsonwebtoken": "^8.4.0",
     "jwt-decode": "^2.2.0",
-    "lodash": "^4.17.11",
     "mongoose": "^5.3.13",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
@@ -39,7 +38,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "heroku-postbuild": "yarn install --only=dev && yarn install && yarn run build"
+    "heroku-postbuild": "yarn install --only=dev && yarn install && yarn run build",
+    "now-build": "react-scripts build",
+    "deploy": "now --public"
   },
   "eslintConfig": {
     "extends": "react-app"
