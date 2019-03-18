@@ -21,7 +21,7 @@ class App extends Component {
         <div>
           
           <TopNavbar />
-
+          <div style={{ marginTop: 72 }}>
             <Route exact path="/" component={ Home } />
             <Route exact path="/register" component={ Register } />
             <Route exact path="/login" component={ Login } />
@@ -29,7 +29,7 @@ class App extends Component {
             <Route path="/strings" component={ StringPage } />
             <Route path="/arrays" component={ ArrayPage } />
             <Route path="/numbers" component={ NumberPage } />
-
+          </div>
         </div>
       </Router>
     );

@@ -25,7 +25,7 @@
     },
     { "src": "/favicon.ico", "dest": "/favicon.ico" },
     { "src": "/asset-manifest.json", "dest": "/asset-manifest.json" },
-    { "src": "/manifest.json", "dest": "/manifest.jsonhttps://js-cheats-bsnkiwutv.now.sh/blog" },
+    { "src": "/manifest.json", "dest": "/manifest.json" },
     { "src": "/precache-manifest.(.*)", "dest": "/precache-manifest.$1" },
     {
       "src": "/service-worker.js",
