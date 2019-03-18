@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 // import bootstrap css
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/highlight.js/styles/default.css';
 // import example post components
 import PostContainer from './components/Post/PostContainer';
 import TopNavbar from "./components/TopNavbar/TopNavbar";
@@ -20,7 +21,7 @@ class App extends Component {
         <div>
           
           <TopNavbar />
-
+          <div style={{ marginTop: 72 }}>
             <Route exact path="/" component={ Home } />
             <Route exact path="/register" component={ Register } />
             <Route exact path="/login" component={ Login } />
@@ -28,7 +29,7 @@ class App extends Component {
             <Route path="/strings" component={ StringPage } />
             <Route path="/arrays" component={ ArrayPage } />
             <Route path="/numbers" component={ NumberPage } />
-
+          </div>
         </div>
       </Router>
     );

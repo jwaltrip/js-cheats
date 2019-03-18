@@ -1,30 +1,51 @@
-import React from 'react';
+import React from "react";
+import Highlight from "react-highlight";
+import { Badge } from 'reactstrap';
 import "./sub-pages.css";
-// import PropTypes from 'prop-types';
 
 class StrEndsWith extends React.Component {
   render() {
     return (
       <div>
         <h1>.endsWith()</h1>
-        <hr/>
+        <hr />
         <div className="sublabel">Description:</div>
-        <p className="subtext">Determines whether a string ends with the characters of a specified string.
-          <ul> 
-            <li>Method returns true if the string ends with the characters, and false if not.</li>
-            <li>Case Senistive</li>
-          </ul> 
+        <p className="subtext">
+          Determines whether a string ends with the characters of a specified string
         </p>
+        <ul>
+          <li>
+            Method returns <code>true</code> if the string ends with the characters, and <code>false</code> if not
+          </li>
+          <li>Case sensitive</li>
+        </ul>
         <div className="sublabel">Syntax:</div>
-        <p className="subtext">string.endsWith( search value , length) 
-          <ul>
-            <li>Start - Optional not required, and the default is the length of the string.</li>
-           
-          </ul>
-          </p>
+        <div className="syntax">
+          <Highlight className='javascript'>
+            {"string.endsWith(searchValue, length)"}
+          </Highlight>
+        </div>
+        <ul>
+          <li>
+            <code>searchValue</code> - <Badge color="primary">required</Badge> value to search for in string
+          </li>
+          <li>
+            <code>length</code> - <Badge color="secondary">optional</Badge> the default is the length of the string
+          </li>
+        </ul>
         <div className="sublabel">Example:</div>
         <div className="example">
-            <iframe height="400px" width="100%" src="https://repl.it/@Zgutier5/endsWtih?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>        </div>
+          <iframe
+            title="string-endsWith"
+            height="400px"
+            width="100%"
+            src="https://repl.it/@Zgutier5/endsWtih?lite=true"
+            scrolling="no"
+            frameBorder="no"
+            allowFullScreen={true}
+            sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"
+          />
+        </div>
       </div>
     );
   }

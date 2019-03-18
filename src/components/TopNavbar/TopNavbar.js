@@ -35,10 +35,6 @@ class TopNavbar extends Component {
     const { isAuthenticated, user } = this.props.auth;
 
     const leftNavLinksAuth = [
-      <NavItem key='topnav-left-1'>
-        <NavLink tag={Link} to="/blog">Blog</NavLink>
-      </NavItem>,
-      <span key='topnav-sep' style={{ margin: 'auto 5px auto 5px', color: 'rgba(255,255,255,.3)' }}>|</span>,
       <NavItem key='topnav-left-2'>
         <NavLink tag={Link} to="/strings/overview">Strings</NavLink>
       </NavItem>,
@@ -47,6 +43,10 @@ class TopNavbar extends Component {
       </NavItem>,
       <NavItem key='topnav-left-4'>
         <NavLink tag={Link} to="/arrays/overview">Arrays</NavLink>
+      </NavItem>,
+      <span key='topnav-sep' style={{ margin: 'auto 5px auto 5px', color: 'rgba(255,255,255,.3)' }}>|</span>,
+      <NavItem key='topnav-left-1'>
+        <NavLink tag={Link} to="/blog">Blog</NavLink>
       </NavItem>,
     ];
   
@@ -90,11 +90,11 @@ class TopNavbar extends Component {
     ];
 
     const guestLinks = [
-      <form key='auth-1' className="form-inline my-2 my-lg-0">
+      <form key='noauth-1' className="form-inline my-2 my-lg-0">
         <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
         <button className="btn btn-outline-success my-2 my-sm-0 mr-3" type="submit">Search</button>
       </form>,
-      <ul className="navbar-nav">
+      <ul key='noauth-2' className="navbar-nav">
         <NavItem>
           <NavLink tag={Link} to="/register">Register</NavLink>
         </NavItem>
@@ -105,7 +105,7 @@ class TopNavbar extends Component {
     ];
 
     return (
-      <Navbar color='dark' dark expand='lg' className="mb-4">
+      <Navbar color='dark' dark expand='lg' fixed="top" className="mb-4">
         <NavbarBrand tag={Link} to="/">JS Cheats</NavbarBrand>
         <Nav className="mr-auto left-navbar-links" navbar>
           {isAuthenticated ? leftNavLinksAuth: leftNavLinksNoAuth}

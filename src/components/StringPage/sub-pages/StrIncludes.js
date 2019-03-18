@@ -1,29 +1,47 @@
 import React from 'react';
+import Highlight from 'react-highlight';
+import { Badge } from 'reactstrap';
 import "./sub-pages.css";
-// import PropTypes from 'prop-types';
 
 class StrIncludes extends React.Component {
   render() {
     return (
       <div>
         <h1>.includes()</h1>
-        <hr/>
+        <hr />
         <div className="sublabel">Description:</div>
-        <p className="subtext">The method determines whether a string contains the characters of a specified string.
-          <ul> 
-            <li>Returns true if the string contains the characters, and false if not.</li>
-            <li>Case Sensitive.</li>
-          </ul> 
+        <p className="subtext">
+          The method determines whether a string contains the characters of a specified string
         </p>
+        <ul>
+          <li>
+            Returns <code>true</code> if the string contains the characters, and <code>false</code> if not
+          </li>
+          <li>Case sensitive</li>
+        </ul>
         <div className="sublabel">Syntax:</div>
-        <p className="subtext">string.includes( search value , start) 
-          <ul>
-              <li>Start - Optional not required, default is 0.</li>
-          </ul>
-          </p>
+        <div className="syntax">
+          <Highlight className='javascript'>
+            {"string.includes(searchValue, start)"}
+          </Highlight>
+        </div>
+        <ul>
+          <li><code>searchValue</code> - <Badge color="primary">required</Badge> value to search for in string</li>
+          <li><code>start</code> - <Badge color="secondary">optional</Badge> default value is <code>0</code></li>
+        </ul>
         <div className="sublabel">Example:</div>
         <div className="example">
-            <iframe height="400px" width="100%" src="https://repl.it/@Zgutier5/includes?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>        </div>
+          <iframe
+            title="string-includes"
+            height="400px"
+            width="100%"
+            src="https://repl.it/@Zgutier5/includes?lite=true"
+            scrolling="no"
+            frameBorder="no"
+            allowFullScreen={true}
+            sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"
+          />
+        </div>
       </div>
     );
   }

@@ -1,0 +1,44 @@
+{
+  "name": "js-cheats",
+  "version": 2,
+  "env": {
+    "PORT": "21793",
+    "SECRET": "@js-cheats-secret",
+    "MONGODB_URI": "@js-cheats-db"
+  },
+  "builds": [
+    { "src": "server.js", "use": "@now/node-server" },
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": { "distDir": "build" }
+    }
+  ],
+  "routes": [
+    { "src": "/api/.*", "dest": "server.js" },
+    { "src": "/posts", "dest": "server.js" },
+    { "src": "/posts/.*", "dest": "server.js" },
+    {
+      "src": "/static/(.*)",
+      "headers": { "cache-control": "s-maxage=31536000,immutable" },
+      "dest": "/static/$1"
+    },
+    { "src": "/favicon.ico", "dest": "/favicon.ico" },
+    { "src": "/asset-manifest.json", "dest": "/asset-manifest.json" },
+    { "src": "/manifest.json", "dest": "/manifest.json" },
+    { "src": "/precache-manifest.(.*)", "dest": "/precache-manifest.$1" },
+    {
+      "src": "/service-worker.js",
+      "headers": { "cache-control": "s-maxage=0" },
+      "dest": "/service-worker.js"
+    },
+    {
+      "src": "/(.*)",
+      "headers": { "cache-control": "s-maxage=0" },
+      "dest": "/index.html"
+    }
+  ],
+  "github": {
+    "enabled": false
+  }
+}

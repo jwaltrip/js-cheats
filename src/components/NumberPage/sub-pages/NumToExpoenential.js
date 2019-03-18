@@ -5,7 +5,7 @@ class NumToExponentail extends React.Component {
   render() {
     return (
       <div>
-      <h1>.toExponentail()</h1>
+      <h1>.toExponential()</h1>
         <hr/>
         <div className="sublabel">Description:</div>
         <p className="subtext">The method returns a string, with a number rounded and written using exponential notation.

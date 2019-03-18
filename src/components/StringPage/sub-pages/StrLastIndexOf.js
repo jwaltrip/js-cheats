@@ -1,28 +1,52 @@
-import React from 'react';
+import React from "react";
+import Highlight from 'react-highlight';
+import { Badge } from 'reactstrap';
 import "./sub-pages.css";
-// import PropTypes from 'prop-types';
 
 class StrLastIndexOf extends React.Component {
   render() {
     return (
       <div>
         <h1>.lastIndexOf()</h1>
-        <hr/>
+        <hr />
         <div className="sublabel">Description:</div>
-        <p className="subtext">The method returns the position of the last occurance of specified value in a string.
-          <ul> 
-            <li>String is searched from end to beginning, rut returns index regularly (0 = first index/character).</li>  
-            <li>Method returns a -1 if the value to search for never occurs.</li>
-            <li>Case Senistive</li>
-          </ul> 
+        <p className="subtext">
+          The method returns the position of the last occurance of specified value in a string
         </p>
+        <ul>
+          <li>
+            String is searched from end to beginning, and returns index if found <code>(0 = first index/character)</code>
+          </li>
+          <li>
+            Method returns <code>-1</code> if the value to search for is not found
+          </li>
+          <li>Case sensitive</li>
+        </ul>
         <div className="sublabel">Syntax:</div>
-        <p className="subtext">string.lastIndexOf( search value , start) 
-          <ul></ul>
-          </p>
+        <div className="syntax">
+          <Highlight className='javascript'>
+            {"string.lastIndexOf(searchValue, start)"}
+          </Highlight>
+        </div>
+        <ul>
+          <li><code>searchValue</code> - <Badge color="primary">required</Badge> value to search for in the string</li>
+          <li>
+            <code>start</code> - <Badge color="secondary">optional</Badge> the default value is the beginning of the string
+          </li>
+        </ul>
         <div className="sublabel">Example:</div>
         <div className="example">
-            <iframe height="400px" width="100%" src="https://repl.it/@Zgutier5/lastIndexOf?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>        </div>
+          <iframe
+            title="string-lastIndexOf"
+            height="400px"
+            width="100%"
+            src="https://repl.it/@Zgutier5/lastIndexOf?lite=true"
+            scrolling="no"
+            frameBorder="no"
+            allowFullScreen={true}
+            sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"
+          />
+        </div>
       </div>
     );
   }
