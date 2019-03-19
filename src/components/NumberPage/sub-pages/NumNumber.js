@@ -1,4 +1,6 @@
 import React from 'react';
+import { Badge } from 'reactstrap';
+import Highlight from "react-highlight";
 // import PropTypes from 'prop-types';
 
 class NumNumber extends React.Component {
@@ -14,9 +16,12 @@ class NumNumber extends React.Component {
           </ul> 
         </p>
         <div className="sublabel">Syntax:</div>
-        <p className="subtext">.Number( number) 
+        <p className="subtext">
+          <Highlight className="javascript">
+            {".Number(number)"}
+          </Highlight> 
           <ul>
-              <li>Number - Required.</li>
+              <li><code>Number</code> - <Badge color="primary">required</Badge></li>
           </ul>
           </p>
         <div className="sublabel">Example:</div>

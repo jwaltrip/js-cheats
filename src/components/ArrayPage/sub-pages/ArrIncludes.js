@@ -1,4 +1,5 @@
 import React from "react";
+import Highlight from 'react-highlight';
 import "./sub-pages.css";
 // import PropTypes from 'prop-types';
 
@@ -14,7 +15,12 @@ class ArrIncludes extends React.Component {
           value among its entries, returning true or false as appropriate.
         </p>
         <div className="sublabel">Syntax:</div>
-        <p className="subtext">arr.includes(valueToFind[, fromIndex])</p>
+        <p className="subtext">
+          <Highlight className='javascript'>
+            {"arr.includes(valueToFind[, fromIndex])"}
+          </Highlight>
+          
+        </p>
         <div className="sublabel">Example:</div>
         <div className="example">
           <iframe
