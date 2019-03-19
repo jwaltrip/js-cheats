@@ -1,4 +1,5 @@
 import React from "react";
+import Highlight from 'react-highlight';
 // import PropTypes from 'prop-types';
 
 class ArrMap extends React.Component {
@@ -14,9 +15,10 @@ class ArrMap extends React.Component {
         </p>
         <div className="sublabel">Syntax:</div>
         <p className="subtext">
-          <pre>{`var new_array = arr.map(function callback(currentValue[, index[, array]]) {
-    // Return element for new_array
-}[, thisArg])`}</pre>
+          <Highlight className='javascript'>
+            {"var new_array = arr.map(function callback(currentValue[, index[, array]]) {// Return element for new_array}[, thisArg])"}
+          </Highlight>
+          
         </p>
         <div className="sublabel">Example:</div>
         <div className="example">

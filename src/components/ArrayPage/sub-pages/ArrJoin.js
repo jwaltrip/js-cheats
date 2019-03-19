@@ -1,4 +1,5 @@
 import React from "react";
+import Highlight from 'react-highlight';
 import "./sub-pages.css";
 // import PropTypes from 'prop-types';
 
@@ -15,7 +16,11 @@ class ArrJoin extends React.Component {
           specified separator string.
         </p>
         <div className="sublabel">Syntax:</div>
-        <p className="subtext">arr.join("separator")</p>
+        <p className="subtext">
+          <Highlight className='javascript'>
+            {"arr.join(separator)"}
+          </Highlight>
+        </p>
         <div className="sublabel">Example:</div>
         <div className="example">
           <iframe

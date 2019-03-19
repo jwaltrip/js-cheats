@@ -1,4 +1,5 @@
 import React from "react";
+import Highlight from 'react-highlight';
 // import PropTypes from 'prop-types';
 
 class ArrForEach extends React.Component {
@@ -14,9 +15,10 @@ class ArrForEach extends React.Component {
         </p>
         <div className="sublabel">Syntax:</div>
         <p className="subtext">
-          <pre>{`arr.forEach(function callback(currentValue [, index [, array]]) {
-    //your iterator
-}[, thisArg]);`}</pre>
+          <Highlight className='javascript'>
+            {"arr.forEach(function callback(currentValue [, index [, array]]) {//your iterator}[, thisArg]);"}
+          </Highlight>
+          
         </p>
         <div className="sublabel">Example:</div>
         <div className="example">

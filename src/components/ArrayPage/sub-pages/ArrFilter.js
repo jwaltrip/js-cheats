@@ -1,4 +1,5 @@
 import React from "react";
+import Highlight from 'react-highlight';
 // import PropTypes from 'prop-types';
 
 class ArrFilter extends React.Component {
@@ -13,7 +14,10 @@ class ArrFilter extends React.Component {
         </p>
         <div className="sublabel"> Syntax: </div>
         <p className="subtext">
-          <pre>{`var newArray = arr.filter(callback(element[, index[, array]])[, thisArg])`}</pre>
+          <Highlight className='javascript'>
+            {"var newArray = arr.filter(callback(element[, index[, array]])[, thisArg])"}
+          </Highlight>
+          
         </p>
         <div className="sublabel"> Example: </div>{" "}
         <div className="example">

@@ -1,4 +1,5 @@
 import React from "react";
+import Highlight from 'react-highlight';
 import "./sub-pages.css";
 //import Gist from 'react-gist';
 // import PropTypes from 'prop-types';
@@ -16,7 +17,12 @@ class ArrPush extends React.Component {
         <p className="subtext"> Returns the new array length. </p>{" "}
         <p className="subtext"> Mutates the original array. </p>{" "}
         <div className="sublabel"> Syntax: </div>{" "}
-        <p className="subtext"> array.push(item1, item2, ..., itemX) </p>{" "}
+        <p className="subtext"> 
+          <Highlight className='javascript'>
+            {"array.push(item1, item2, ..., itemX)"}
+          </Highlight>
+        
+        </p>{" "}
         <div className="sublabel"> Example: </div>{" "}
         <div className="example">
           <iframe

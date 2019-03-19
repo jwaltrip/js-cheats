@@ -1,4 +1,6 @@
 import React from 'react';
+import { Badge } from 'reactstrap';
+import Highlight from "react-highlight";
 // import PropTypes from 'prop-types';
 
 class NumToFixed extends React.Component {
@@ -12,9 +14,12 @@ class NumToFixed extends React.Component {
           <ul></ul> 
         </p>
         <div className="sublabel">Syntax:</div>
-        <p className="subtext">number.toFixed ( number) 
+        <p className="subtext"> 
+          <Highlight className="javascript">
+            {"number.toFixed (number)"}
+          </Highlight> 
           <ul>
-              <li>Number - Required.</li>
+              <li><code>Number</code> - <Badge color="primary">required</Badge></li>
           </ul>
           </p>
         <div className="sublabel">Example:</div>

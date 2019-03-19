@@ -1,4 +1,5 @@
 import React from "react";
+import Highlight from 'react-highlight';
 import "./sub-pages.css";
 
 class ArrConcat extends React.Component {
@@ -15,7 +16,9 @@ class ArrConcat extends React.Component {
         </p>{" "}
         <div className="sublabel"> Syntax: </div>{" "}
         <p className="subtext">
-          const newArray = oldArray.concat(value1, value2, ..., valueN){" "}
+          <Highlight className='javascript'>
+            {"const newArray = oldArray.concat(value1, value2, ..., valueN)"}
+          </Highlight>{" "}
         </p>{" "}
         <div className="sublabel"> Example: </div>{" "}
         <div className="example">
