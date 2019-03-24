@@ -1,6 +1,7 @@
 import React from "react";
-import Highlight from "react-highlight";
-import { Badge } from "reactstrap";
+import BadgeRequired from "../../BadgeRequired/BadgeRequired";
+import BadgeOptional from "../../BadgeOptional/BadgeOptional";
+import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 import "./sub-pages.css";
 
 class StrStartsWith extends React.Component {
@@ -20,16 +21,12 @@ class StrStartsWith extends React.Component {
           <li>Case senistive</li>
         </ul>
         <div className="sublabel">Syntax:</div>
-        <div className="syntax">
-          <Highlight className='javascript'>
-            {"string.startsWith(searchValue, start)"}
-          </Highlight>
-        </div>
+        <SyntaxHighlight syntax="string.startsWith(searchValue, start)" />
         <ul>
           <li>
-            <code>searchValue</code> - <Badge color="primary">required</Badge> value to search for in string
+            <code>searchValue</code> - <BadgeRequired /> value to search for in string
           </li>
-          <li><code>start</code> - <Badge color="secondary">optional</Badge> the default index value is <code>0</code></li>
+          <li><code>start</code> - <BadgeOptional /> the default index value is <code>0</code></li>
         </ul>
         <div className="sublabel">Example:</div>
         <div className="example">

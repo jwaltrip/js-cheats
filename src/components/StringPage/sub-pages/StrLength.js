@@ -1,5 +1,5 @@
 import React from "react";
-import Highlight from 'react-highlight';
+import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 import "./sub-pages.css";
 
 class StrLength extends React.Component {
@@ -13,11 +13,7 @@ class StrLength extends React.Component {
           Returns the number of characters in a string
         </p>
         <div className="sublabel">Syntax:</div>
-        <div className="syntax">
-          <Highlight className='javascript'>
-            {"string.length"}
-          </Highlight>
-        </div>
+        <SyntaxHighlight syntax="string.length" />
         <div className="sublabel">Example:</div>
         <div className="example">
           <iframe

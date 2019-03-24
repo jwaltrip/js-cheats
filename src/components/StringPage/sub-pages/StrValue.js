@@ -1,5 +1,5 @@
 import React from "react";
-import Highlight from "react-highlight";
+import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 import "./sub-pages.css";
 
 class StrValue extends React.Component {
@@ -13,11 +13,7 @@ class StrValue extends React.Component {
           This method returns the primitive value of a string object
         </p>
         <div className="sublabel">Syntax:</div>
-        <div className="syntax">
-          <Highlight className='javascript'>
-            {"string.valueOf()"}
-          </Highlight>
-        </div>
+        <SyntaxHighlight syntax="string.valueOf()" />
         <div className="sublabel">Example:</div>
         <div className="example">
           <iframe

@@ -1,6 +1,6 @@
 import React from "react";
-import Highlight from "react-highlight";
-import { Badge } from 'reactstrap';
+import BadgeRequired from "../../BadgeRequired/BadgeRequired";
+import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 import "./sub-pages.css";
 
 class StrMatch extends React.Component {
@@ -14,14 +14,10 @@ class StrMatch extends React.Component {
           The method searches a string for a match against a regular expression, and returns the matches as an array object
         </p>
         <div className="sublabel">Syntax:</div>
-        <div className="syntax">
-          <Highlight className='javascript'>
-            {"string.match(regexp)"}
-          </Highlight>
-        </div>
+        <SyntaxHighlight syntax="string.match(regexp)" />
         <ul>
           <li>
-            <code>regexp</code> - <Badge color="primary">required</Badge> regex expression to find match for
+            <code>regexp</code> - <BadgeRequired /> regex expression to find match for
           </li>
         </ul>
         <div className="sublabel">Example:</div>

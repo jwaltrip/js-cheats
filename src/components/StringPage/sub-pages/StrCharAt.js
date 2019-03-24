@@ -1,7 +1,7 @@
 import React from "react";
-import Highlight from 'react-highlight';
-import { Badge } from 'reactstrap';
 import "./sub-pages.css";
+import BadgeRequired from "../../BadgeRequired/BadgeRequired";
+import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 
 class StrCharAt extends React.Component {
   render() {
@@ -18,14 +18,10 @@ class StrCharAt extends React.Component {
           <li>Index of the last character is <code>string.length - 1</code></li>
         </ul>
         <div className="sublabel">Syntax:</div>
-        <div className="syntax">
-          <Highlight className='javascript'>
-            {"string.charAt(index)"}
-          </Highlight>
-        </div>
+        <SyntaxHighlight syntax="string.charAt(index)" />
         <ul>
           <li>
-            <code>index</code> - <Badge color="primary">required</Badge>
+            <code>index</code> - <BadgeRequired /> the index of the character to be returned
           </li>
         </ul>
         <div className="sublabel">Example:</div>

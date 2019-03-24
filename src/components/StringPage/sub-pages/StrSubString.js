@@ -1,6 +1,7 @@
 import React from "react";
-import Highlight from "react-highlight";
-import { Badge } from "reactstrap";
+import BadgeRequired from "../../BadgeRequired/BadgeRequired";
+import BadgeOptional from "../../BadgeOptional/BadgeOptional";
+import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 import "./sub-pages.css";
 
 class StrSubString extends React.Component {
@@ -20,17 +21,13 @@ class StrSubString extends React.Component {
           <li>Does not change the original string</li>
         </ul>
         <div className="sublabel">Syntax:</div>
-        <div className="syntax">
-          <Highlight className='javascript'>
-            {"string.substring(start, end)"}
-          </Highlight>
-        </div>
+        <SyntaxHighlight syntax="string.substring(start, end)" />
         <ul>
           <li>
-            <code>start</code> - <Badge color="primary">required</Badge> the index of the first character to include in the returned substring
+            <code>start</code> - <BadgeRequired /> the index of the first character to include in the returned substring
           </li>
           <li>
-            <code>end</code> - <Badge color="secondary">optional</Badge> the index of the first character to exclude from the returned substring
+            <code>end</code> - <BadgeOptional /> the index of the first character to exclude from the returned substring
           </li>
         </ul>
         <div className="sublabel">Example:</div>

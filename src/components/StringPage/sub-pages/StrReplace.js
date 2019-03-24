@@ -1,6 +1,6 @@
 import React from "react";
-import Highlight from "react-highlight";
-import { Badge } from "reactstrap";
+import BadgeRequired from "../../BadgeRequired/BadgeRequired";
+import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 import "./sub-pages.css";
 
 class StrReplace extends React.Component {
@@ -17,17 +17,13 @@ class StrReplace extends React.Component {
           <li>Only the first instance of the value will be replaced</li>
         </ul>
         <div className="sublabel">Syntax:</div>
-        <div className="syntax">
-          <Highlight className='javascript'>
-            {"string.replace(searchValue, newValue)"}
-          </Highlight>
-        </div>
+        <SyntaxHighlight syntax="string.replace(searchValue, newValue)" />
         <ul>
           <li>
-            <code>searchValue</code> - <Badge color="primary">required</Badge> value to search for in string to be replaced
+            <code>searchValue</code> - <BadgeRequired /> value to search for in string to be replaced
           </li>
           <li>
-            <code>newValue</code> - <Badge color="primary">required</Badge> the replacement value
+            <code>newValue</code> - <BadgeRequired /> the replacement value
           </li>
         </ul>
         <div className="sublabel">Example:</div>

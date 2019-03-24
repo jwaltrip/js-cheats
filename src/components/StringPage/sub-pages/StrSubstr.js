@@ -1,6 +1,7 @@
 import React from "react";
-import Highlight from "react-highlight";
-import { Badge } from "reactstrap";
+import BadgeRequired from "../../BadgeRequired/BadgeRequired";
+import BadgeOptional from "../../BadgeOptional/BadgeOptional";
+import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 import "./sub-pages.css";
 
 class StrSubstr extends React.Component {
@@ -18,17 +19,13 @@ class StrSubstr extends React.Component {
           <li>Does not change the orginal string</li>
         </ul>
         <div className="sublabel">Syntax:</div>
-        <div className="syntax">
-          <Highlight className='javascript'>
-            {"string.substr(start, length)"}
-          </Highlight>
-        </div>
+        <SyntaxHighlight syntax="string.substr(start, length)" />
         <ul>
           <li>
-            <code>start</code> - <Badge color="primary">required</Badge> the index of the first character to include in the returned substring
+            <code>start</code> - <BadgeRequired /> the index of the first character to include in the returned substring
           </li>
           <li>
-            <code>length</code> - <Badge color="secondary">optional</Badge> number of characters to extract
+            <code>length</code> - <BadgeOptional /> number of characters to extract. Default is <code>string.length</code>
           </li>
         </ul>
         <div className="sublabel">Example:</div>

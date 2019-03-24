@@ -1,6 +1,7 @@
 import React from "react";
-import Highlight from 'react-highlight';
-import { Badge } from 'reactstrap';
+import BadgeRequired from "../../BadgeRequired/BadgeRequired";
+import BadgeOptional from "../../BadgeOptional/BadgeOptional";
+import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 import "./sub-pages.css";
 
 class StrLastIndexOf extends React.Component {
@@ -23,15 +24,11 @@ class StrLastIndexOf extends React.Component {
           <li>Case sensitive</li>
         </ul>
         <div className="sublabel">Syntax:</div>
-        <div className="syntax">
-          <Highlight className='javascript'>
-            {"string.lastIndexOf(searchValue, start)"}
-          </Highlight>
-        </div>
+        <SyntaxHighlight syntax="string.lastIndexOf(searchValue, start)" />
         <ul>
-          <li><code>searchValue</code> - <Badge color="primary">required</Badge> value to search for in the string</li>
+          <li><code>searchValue</code> - <BadgeRequired /> value to search for in the string</li>
           <li>
-            <code>start</code> - <Badge color="secondary">optional</Badge> the default value is the beginning of the string
+            <code>start</code> - <BadgeOptional /> the default value is the beginning of the string
           </li>
         </ul>
         <div className="sublabel">Example:</div>

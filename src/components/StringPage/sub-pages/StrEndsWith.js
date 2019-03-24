@@ -1,6 +1,7 @@
 import React from "react";
-import Highlight from "react-highlight";
-import { Badge } from 'reactstrap';
+import BadgeRequired from "../../BadgeRequired/BadgeRequired";
+import BadgeOptional from "../../BadgeOptional/BadgeOptional";
+import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 import "./sub-pages.css";
 
 class StrEndsWith extends React.Component {
@@ -20,17 +21,13 @@ class StrEndsWith extends React.Component {
           <li>Case sensitive</li>
         </ul>
         <div className="sublabel">Syntax:</div>
-        <div className="syntax">
-          <Highlight className='javascript'>
-            {"string.endsWith(searchValue, length)"}
-          </Highlight>
-        </div>
+        <SyntaxHighlight syntax="string.endsWith(searchValue, length)" />
         <ul>
           <li>
-            <code>searchValue</code> - <Badge color="primary">required</Badge> value to search for in string
+            <code>searchValue</code> - <BadgeRequired /> value to search for in string
           </li>
           <li>
-            <code>length</code> - <Badge color="secondary">optional</Badge> the default is the length of the string
+            <code>length</code> - <BadgeOptional /> the default is the length of the string
           </li>
         </ul>
         <div className="sublabel">Example:</div>

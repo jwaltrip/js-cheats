@@ -1,6 +1,6 @@
 import React from "react";
-import Highlight from "react-highlight";
-import { Badge } from "reactstrap";
+import BadgeOptional from "../../BadgeOptional/BadgeOptional";
+import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 import "./sub-pages.css";
 
 class StrSplit extends React.Component {
@@ -20,17 +20,13 @@ class StrSplit extends React.Component {
           <li>Does not change the original string</li>
         </ul>
         <div className="sublabel">Syntax:</div>
-        <div className="syntax">
-          <Highlight className='javascript'>
-            {"string.split(separator, limit)"}
-          </Highlight>
-        </div>
+        <SyntaxHighlight syntax="string.split(separator, limit)" />
         <ul>
           <li>
-            <code>seperator</code> - <Badge color="secondary">optional</Badge> specifies the character where the string will be split
+            <code>seperator</code> - <BadgeOptional /> specifies the character where the string will be split
           </li>
           <li>
-            <code>limit</code> - <Badge color="secondary">optional</Badge> integer that specifies the number of splits, items after not included
+            <code>limit</code> - <BadgeOptional /> integer that specifies the number of splits, items after not included
           </li>
         </ul>
         <div className="sublabel">Example:</div>

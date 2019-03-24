@@ -1,6 +1,7 @@
 import React from "react";
-import Highlight from "react-highlight";
-import { Badge } from "reactstrap";
+import BadgeRequired from "../../BadgeRequired/BadgeRequired";
+import BadgeOptional from "../../BadgeOptional/BadgeOptional";
+import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 import "./sub-pages.css";
 
 class StrParseInt extends React.Component {
@@ -20,14 +21,10 @@ class StrParseInt extends React.Component {
           </li>
         </ul>
         <div className="sublabel">Syntax:</div>
-        <div className="syntax">
-          <Highlight className='javascript'>
-            {"string.parseInt(string, radix)"}
-          </Highlight>
-        </div>
+        <SyntaxHighlight syntax="string.parseInt(string, radix)" />
         <ul>
-          <li><code>string</code> - <Badge color="primary">required</Badge> string containing a number to be converted to number type</li>
-          <li><code>radix</code> - <Badge color="secondary">optional</Badge> default value is base <code>10</code></li>
+          <li><code>string</code> - <BadgeRequired /> string containing a number to be converted to number type</li>
+          <li><code>radix</code> - <BadgeOptional /> default value is base <code>10</code></li>
         </ul>
         <div className="sublabel">Example:</div>
         <div className="example">

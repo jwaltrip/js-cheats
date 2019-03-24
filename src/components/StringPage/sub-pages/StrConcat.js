@@ -1,6 +1,8 @@
 import React from "react";
-import Highlight from 'react-highlight';
 import "./sub-pages.css";
+// import BadgeRequired from "../../BadgeRequired/BadgeRequired";
+// import BadgeOptional from "../../BadgeOptional/BadgeOptional";
+import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 
 class StrConcat extends React.Component {
   render() {
@@ -19,11 +21,7 @@ class StrConcat extends React.Component {
           </li>
         </ul>
         <div className="sublabel">Syntax:</div>
-        <div className="syntax">
-          <Highlight className='javascript'>
-            {"string.concat(string1, string2, ...stringX)"}
-          </Highlight>
-        </div>
+        <SyntaxHighlight syntax="string.concat(string1, string2, ...stringX)" />
         <div className="sublabel">Example:</div>
         <div className="example">
           <iframe

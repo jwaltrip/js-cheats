@@ -1,6 +1,6 @@
 import React from "react";
-import Highlight from "react-highlight";
-import { Badge } from "reactstrap";
+import BadgeRequired from "../../BadgeRequired/BadgeRequired";
+import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 import "./sub-pages.css";
 
 class StrRepeat extends React.Component {
@@ -14,14 +14,10 @@ class StrRepeat extends React.Component {
           The method returns a new string with a specified number of copies of the string it was called on
         </p>
         <div className="sublabel">Syntax:</div>
-        <div className="syntax">
-          <Highlight className='javascript'>
-            {"string.repeat(count)"}
-          </Highlight>
-        </div>
+        <SyntaxHighlight syntax="string.repeat(count)" />
         <ul>
           <li>
-            <code>count</code> - <Badge color="primary">required</Badge> number of times the original string value should be repeated in the new string
+            <code>count</code> - <BadgeRequired /> number of times the original string should be repeated in the new string
           </li>
         </ul>
         <div className="sublabel">Example:</div>

@@ -1,6 +1,7 @@
 import React from "react";
-import Highlight from "react-highlight";
-import { Badge } from "reactstrap";
+import BadgeRequired from "../../BadgeRequired/BadgeRequired";
+import BadgeOptional from "../../BadgeOptional/BadgeOptional";
+import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 import "./sub-pages.css";
 
 class StrSlice extends React.Component {
@@ -17,20 +18,17 @@ class StrSlice extends React.Component {
           <li>
             Use the <code>start</code> and <code>end</code> parameters to specify the part of the string you want to extract
           </li>
+          <li><strong>Note:</strong> the <code>end</code> index is <strong><i>not</i></strong> included in resulting string</li>
           <li>Use a negative number to select from the end of the string.</li>
         </ul>
         <div className="sublabel">Syntax:</div>
-        <div className="syntax">
-          <Highlight className='javascript'>
-            {"string.slice(start, end)"}
-          </Highlight>
-        </div>
+        <SyntaxHighlight syntax="string.slice(start, end)" />
         <ul>
           <li>
-            <code>start</code> - <Badge color="primary">required</Badge> start index
+            <code>start</code> - <BadgeRequired /> start index of where to begin string slice
           </li>
           <li>
-            <code>end</code> - <Badge color="primary">required</Badge> final index
+            <code>end</code> - <BadgeOptional /> end index of where to end string slice. Default value is <code>string.length</code>
           </li>
         </ul>
         <div className="sublabel">Example:</div>

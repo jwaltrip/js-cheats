@@ -1,6 +1,6 @@
 import React from "react";
-import Highlight from "react-highlight";
-import { Badge } from "reactstrap";
+import BadgeRequired from "../../BadgeRequired/BadgeRequired";
+import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 import "./sub-pages.css";
 
 class StrSearch extends React.Component {
@@ -18,14 +18,10 @@ class StrSearch extends React.Component {
           <li>Returns <code>-1</code> if no match is found</li>
         </ul>
         <div className="sublabel">Syntax:</div>
-        <div className="syntax">
-          <Highlight className='javascript'>
-            {"string.search(searchValue)"}
-          </Highlight>
-        </div>
+        <SyntaxHighlight syntax="string.search(searchValue)" />
         <ul>
           <li>
-            <code>searchValue</code> - <Badge color="primary">required</Badge> value to search for in string
+            <code>searchValue</code> - <BadgeRequired /> value to search for in string
           </li>
         </ul>
         <div className="sublabel">Example:</div>

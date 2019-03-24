@@ -1,7 +1,8 @@
 import React from 'react';
-import Highlight from 'react-highlight';
-import { Badge } from 'reactstrap';
 import "./sub-pages.css";
+import BadgeRequired from "../../BadgeRequired/BadgeRequired";
+import BadgeOptional from "../../BadgeOptional/BadgeOptional";
+import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 
 class StrIncludes extends React.Component {
   render() {
@@ -20,14 +21,10 @@ class StrIncludes extends React.Component {
           <li>Case sensitive</li>
         </ul>
         <div className="sublabel">Syntax:</div>
-        <div className="syntax">
-          <Highlight className='javascript'>
-            {"string.includes(searchValue, start)"}
-          </Highlight>
-        </div>
+        <SyntaxHighlight syntax="string.includes(searchValue, start)" />
         <ul>
-          <li><code>searchValue</code> - <Badge color="primary">required</Badge> value to search for in string</li>
-          <li><code>start</code> - <Badge color="secondary">optional</Badge> default value is <code>0</code></li>
+          <li><code>searchValue</code> - <BadgeRequired /> value to search for in string</li>
+          <li><code>start</code> - <BadgeOptional /> default value is <code>0</code></li>
         </ul>
         <div className="sublabel">Example:</div>
         <div className="example">
