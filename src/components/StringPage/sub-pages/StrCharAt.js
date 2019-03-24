@@ -1,7 +1,7 @@
 import React from "react";
 import "./sub-pages.css";
-import BadgeRequired from "../../BadgeRequired/BadgeRequired";
 import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
+import ParamDesc from "../../ParamDesc/ParamDesc";
 
 class StrCharAt extends React.Component {
   render() {
@@ -17,13 +17,18 @@ class StrCharAt extends React.Component {
           <li>Index of the first character is <code>0</code></li>
           <li>Index of the last character is <code>string.length - 1</code></li>
         </ul>
+        
         <div className="sublabel">Syntax:</div>
         <SyntaxHighlight syntax="string.charAt(index)" />
-        <ul>
-          <li>
-            <code>index</code> - <BadgeRequired /> the index of the character to be returned
-          </li>
-        </ul>
+        
+        <h5>Parameter Description:</h5>
+        <ParamDesc
+          isRequired={true}
+          paramName="index"
+          paramNameWidth={70}
+          paramDesc="the index of the character to be returned"
+        />
+        
         <div className="sublabel">Example:</div>
         <div className="example">
           <iframe

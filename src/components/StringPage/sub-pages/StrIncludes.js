@@ -3,6 +3,7 @@ import "./sub-pages.css";
 import BadgeRequired from "../../BadgeRequired/BadgeRequired";
 import BadgeOptional from "../../BadgeOptional/BadgeOptional";
 import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
+import ParamDesc from "../../ParamDesc/ParamDesc";
 
 class StrIncludes extends React.Component {
   render() {
@@ -20,12 +21,23 @@ class StrIncludes extends React.Component {
           </li>
           <li>Case sensitive</li>
         </ul>
+        
         <div className="sublabel">Syntax:</div>
         <SyntaxHighlight syntax="string.includes(searchValue, start)" />
-        <ul>
-          <li><code>searchValue</code> - <BadgeRequired /> value to search for in string</li>
-          <li><code>start</code> - <BadgeOptional /> default value is <code>0</code></li>
-        </ul>
+        
+        <ParamDesc
+          isRequired={true}
+          paramName="searchValue"
+          paramNameWidth={115}
+          paramDesc="value to search for in string"
+        />
+        <ParamDesc
+          isRequired={false}
+          paramName="start"
+          paramNameWidth={115}
+          paramDesc={<span>{"default value is "} <code>0</code></span>}
+        />
+        
         <div className="sublabel">Example:</div>
         <div className="example">
           <iframe

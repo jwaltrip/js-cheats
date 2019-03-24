@@ -1,8 +1,7 @@
 import React from "react";
-import BadgeRequired from "../../BadgeRequired/BadgeRequired";
-import BadgeOptional from "../../BadgeOptional/BadgeOptional";
 import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 import "./sub-pages.css";
+import ParamDesc from "../../ParamDesc/ParamDesc";
 
 class StrEndsWith extends React.Component {
   render() {
@@ -20,16 +19,24 @@ class StrEndsWith extends React.Component {
           </li>
           <li>Case sensitive</li>
         </ul>
+        
         <div className="sublabel">Syntax:</div>
         <SyntaxHighlight syntax="string.endsWith(searchValue, length)" />
-        <ul>
-          <li>
-            <code>searchValue</code> - <BadgeRequired /> value to search for in string
-          </li>
-          <li>
-            <code>length</code> - <BadgeOptional /> the default is the length of the string
-          </li>
-        </ul>
+  
+        <h5>Parameter Description:</h5>
+        <ParamDesc
+          isRequired={true}
+          paramName="searchValue"
+          paramNameWidth={115}
+          paramDesc="value to search for in string"
+        />
+        <ParamDesc
+          isRequired={false}
+          paramName="length"
+          paramNameWidth={115}
+          paramDesc="the default is the length of the string"
+        />
+        
         <div className="sublabel">Example:</div>
         <div className="example">
           <iframe

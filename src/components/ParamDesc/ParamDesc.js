@@ -1,0 +1,26 @@
+import React from 'react';
+import BadgeRequired from "../BadgeRequired/BadgeRequired";
+import BadgeOptional from "../BadgeOptional/BadgeOptional";
+
+const ParamDesc = ({ isRequired, paramName, paramDesc, paramNameWidth }) => {
+  // check if param is required or optional
+  let badge;
+  if (isRequired) {
+    badge = <BadgeRequired />;
+  } else {
+    badge = <BadgeOptional />;
+  }
+  
+  return (
+    <div className="params">
+      <div className="param-name" style={{ width: paramNameWidth }}>
+        <code>{paramName}</code>
+      </div>
+      <div>
+        {badge} <span className="param-desc"> {paramDesc} </span>
+      </div>
+    </div>
+  );
+};
+
+export default ParamDesc;
