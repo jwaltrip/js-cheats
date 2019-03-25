@@ -20,7 +20,6 @@ import ArrSort from './sub-pages/ArrSort';
 import ArrSplice from './sub-pages/ArrSplice';
 import ArrString from './sub-pages/ArrString';
 import ArrUnshift from './sub-pages/ArrUnshift';
-import ArrValue from './sub-pages/ArrValue';
 
 const routes = [
   {
@@ -142,12 +141,6 @@ const routes = [
     name: "unshift()",
     exact: true,
     comp: ArrUnshift
-  },
-  {
-    path: "/arrays/valueof",
-    name: "valueOf()",
-    exact: true,
-    comp: ArrValue
   }
 ];
 
