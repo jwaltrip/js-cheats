@@ -21,7 +21,7 @@ const ParamDesc = ({ isRequired, paramName, paramDesc, paramNameWidth, children 
   
   return (
     <div className="params">
-      <div className="param-name" style={{ width: paramNameWidth }}>
+      <div className="param-name" style={{ width: paramNameWidth, minWidth: 10 }}>
         <code>{paramName}</code>
       </div>
       <div>
