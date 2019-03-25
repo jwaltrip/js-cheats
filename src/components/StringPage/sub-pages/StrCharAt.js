@@ -1,30 +1,48 @@
-import React from 'react';
-import "./sub-pages.css";
-// import PropTypes from 'prop-types';
+import React from "react";
+import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
+import ParamDesc from "../../ParamDesc/ParamDesc";
 
-class StrCharAt extends React.Component {
-  render() {
-    return (
-      <div>
-        <h1>.charAt()</h1>
-        <hr/>
-        <div className="sublabel">Description:</div>
-        <p className="subtext">Returns the characters at the specified index in a string
-          <ul> 
-            <li>Index of the first character is 0.</li>
-            <li>Index of the last character is string.length - 1.</li>
-          </ul> 
-        </p>
-        <div className="sublabel">Syntax:</div>
-        <p className="subtext">string.charAt(index) 
-          <ul></ul>
-          </p>
-        <div className="sublabel">Example:</div>
-        <div className="example">
-            <iframe height="400px" width="100%" src="https://repl.it/@Zgutier5/charAt?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>        </div>
+const StrCharAt = () => {
+  return (
+    <div>
+      <h1>.charAt()</h1>
+      <hr />
+      
+      <div className="sublabel">Description:</div>
+      <p className="subtext">
+        Returns the characters at the specified index in a string
+      </p>
+      <ul>
+        <li>Index of the first character is <code>0</code></li>
+        <li>Index of the last character is <code>string.length - 1</code></li>
+      </ul>
+    
+      <div className="sublabel">Syntax:</div>
+      <SyntaxHighlight syntax="string.charAt(index)" />
+    
+      <h5>Parameter Description:</h5>
+      <ParamDesc
+        isRequired={true}
+        paramName="index"
+        paramNameWidth={60}
+        paramDesc="the index of the character to be returned"
+      />
+    
+      <div className="sublabel">Example:</div>
+      <div className="example">
+        <iframe
+          title="string-charAt"
+          height="400px"
+          width="100%"
+          src="https://repl.it/@Zgutier5/charAt?lite=true"
+          scrolling="no"
+          frameBorder="no"
+          allowFullScreen={true}
+          sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"
+        />
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default StrCharAt;

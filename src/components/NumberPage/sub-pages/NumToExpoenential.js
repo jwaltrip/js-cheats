@@ -1,30 +1,44 @@
-import React from 'react';
-// import PropTypes from 'prop-types';
+import React from "react";
+import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
+import ParamDesc from "../../ParamDesc/ParamDesc";
 
-class NumToExponentail extends React.Component {
-  render() {
-    return (
-      <div>
+const NumToExponential = () => {
+  return (
+    <div>
       <h1>.toExponential()</h1>
-        <hr/>
-        <div className="sublabel">Description:</div>
-        <p className="subtext">The method returns a string, with a number rounded and written using exponential notation.
-          <ul> 
-            <li>A parameter defines the number of characters behind the decimal point.</li>
-          </ul> 
-        </p>
-        <div className="sublabel">Syntax:</div>
-        <p className="subtext">number.toExponentail ( number) 
-          <ul>
-              <li>Number - Required.</li>
-          </ul>
-          </p>
-        <div className="sublabel">Example:</div>
-        <div className="example">
-            <iframe height="400px" width="100%" src="https://repl.it/@Zgutier5/toExpoenentail?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>        </div>
+      <hr />
+    
+      <div className="sublabel">Description:</div>
+      <p className="subtext">
+        The method returns a <code>string</code>, with a number rounded and written using exponential notation
+      </p>
+    
+      <div className="sublabel">Syntax:</div>
+      <SyntaxHighlight syntax="number.toExponential(fractionDigits)" />
+    
+      <h5>Parameter Description:</h5>
+      <ParamDesc
+        isRequired={false}
+        paramName="fractionDigits"
+        paramNameWidth={150}
+        paramDesc="An integer specifying the number of digits after the decimal point. Defaults to as many digits as necessary to specify the number"
+      />
+    
+      <div className="sublabel">Example:</div>
+      <div className="example">
+        <iframe
+          title="num-toExponential"
+          height="400px"
+          width="100%"
+          src="https://repl.it/@Zgutier5/toExpoenentail?lite=true"
+          scrolling="no"
+          frameBorder="no"
+          allowFullScreen={true}
+          sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"
+        />
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
-export default NumToExponentail;
+export default NumToExponential;

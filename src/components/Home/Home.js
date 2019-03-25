@@ -5,8 +5,7 @@ import { connect } from 'react-redux';
 import HomeCard from '../HomeCard/HomeCard';
 import { Row, Col } from 'reactstrap';
 
-const Home = (props) => {
-  const loggedOutContent = <p><Link to="/register">Register</Link> or <Link to="/login">Log in</Link> to see the Posts!</p>;
+const Home = () => {
   const loggedInContent = <p>Have any questions? Check out our <Link to="/blog">Blog!</Link></p>;
 
   return (

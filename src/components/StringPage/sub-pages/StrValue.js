@@ -1,26 +1,35 @@
-import React from 'react';
-//import "./sub-pages.css";
-// import PropTypes from 'prop-types';
+import React from "react";
+import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 
-class StrValue extends React.Component {
-  render() {
-    return (
-      <div>
-        <h1>valueOf()</h1>
-        <hr/>
-        <div className="sublabel">Description:</div>
-        <p className="subtext">This method returns the primitive value of a string object.</p>
-        <ul></ul>
-        <div className="sublabel">Syntax:</div>
-        <ul></ul>
-        <p className="subtext">string.valueOf()</p>
-        <div className="sublabel">Example:</div>
-        <div className="example">
-          <iframe height="400px" width="100%" src="https://repl.it/@Zgutier5/valueof?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-        </div>
+const StrValue = () => {
+  return (
+    <div>
+      <h1>valueOf()</h1>
+      <hr />
+      
+      <div className="sublabel">Description:</div>
+      <p className="subtext">
+        This method returns the primitive value of a string object
+      </p>
+      
+      <div className="sublabel">Syntax:</div>
+      <SyntaxHighlight syntax="string.valueOf()" />
+      
+      <div className="sublabel">Example:</div>
+      <div className="example">
+        <iframe
+          title="string-valueof"
+          height="400px"
+          width="100%"
+          src="https://repl.it/@Zgutier5/valueof?lite=true"
+          scrolling="no"
+          frameBorder="no"
+          allowFullScreen={true}
+          sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"
+        />
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default StrValue;

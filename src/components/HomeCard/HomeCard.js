@@ -1,5 +1,4 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import strings from './notebook.gif';
 import arrays from './arraysNotebook.gif';
 import numbers from './numbersNotebook.gif';
@@ -7,7 +6,7 @@ import "./HomeCard.css";
 import { Card, CardText, CardBody, CardTitle, CardImg } from 'reactstrap';
 
 const HomeCard = (props) => {
-  const { title, description, cardType } = props;
+  const { title, description } = props;
 
   let cardImg = "";
   if (props.title === "Strings") {
