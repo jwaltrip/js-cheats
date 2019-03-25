@@ -1,35 +1,58 @@
-import React from 'react';
-import { Badge } from 'reactstrap';
-import Highlight from "react-highlight";
-// import PropTypes from 'prop-types';
+import React from "react";
+import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
+import ParamDesc from "../../ParamDesc/ParamDesc";
 
-class NumParseInt extends React.Component {
-  render() {
-    return (
-      <div>
+const NumParseInt = () => {
+  return (
+    <div>
       <h1>.parseInt()</h1>
-        <hr/>
-        <div className="sublabel">Description:</div>
-        <p className="subtext">The method parses a string and returns a whole number. Spaces are allowed. Only the first number is returned.
-          <ul> 
-            <li>If the first character cannot be converted to a number, parseInt() returns a NaN.</li>
-          </ul> 
-        </p>
-        <div className="sublabel">Syntax:</div>
-        <p className="subtext">
-          <Highlight className="javascript">
-            {"parseInt(number)"}
-          </Highlight>  
-          <ul>
-              <li><code>Number</code> - <Badge color="primary">required</Badge></li>
-          </ul>
-          </p>
-        <div className="sublabel">Example:</div>
-        <div className="example">
-          <iframe height="400px" width="100%" src="https://repl.it/@Zgutier5/parseInt?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>        </div>
+      <hr />
+    
+      <div className="sublabel">Description:</div>
+      <p className="subtext">
+        The method parses a <code>string</code> and returns a <code>integer</code> (whole number)
+      </p>
+      <ul>
+        <li>
+          If the first character cannot be converted to a number, <code>parseInt()</code> returns a <code>NaN</code>
+        </li>
+        <li>Only the first number is returned</li>
+        <li>Spaces are allowed</li>
+      </ul>
+    
+      <div className="sublabel">Syntax:</div>
+      <SyntaxHighlight syntax="Number.parseInt(string, [ radix])" />
+    
+      <h5>Parameter Description:</h5>
+      <ParamDesc
+        isRequired={true}
+        paramName="number"
+        paramNameWidth={70}
+        paramDesc="value to convert to an integer"
+      />
+      <ParamDesc
+        isRequired={false}
+        paramName="radix"
+        paramNameWidth={70}
+      >
+        an <code>integer</code> in the range <code>2</code> through <code>36</code> specifying the base to use for representing numeric values. Default value is base <code>10</code>
+      </ParamDesc>
+    
+      <div className="sublabel">Example:</div>
+      <div className="example">
+        <iframe
+          title="num-parseInt"
+          height="400px"
+          width="100%"
+          src="https://repl.it/@Zgutier5/parseInt?lite=true"
+          scrolling="no"
+          frameBorder="no"
+          allowFullScreen={true}
+          sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"
+        />
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default NumParseInt;
