@@ -1,6 +1,5 @@
 import React from "react";
-import BadgeRequired from "../../BadgeRequired/BadgeRequired";
-import BadgeOptional from "../../BadgeOptional/BadgeOptional";
+import ParamDesc from "../../ParamDesc/ParamDesc";
 import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 import "./sub-pages.css";
 
@@ -22,12 +21,22 @@ class StrStartsWith extends React.Component {
         </ul>
         <div className="sublabel">Syntax:</div>
         <SyntaxHighlight syntax="string.startsWith(searchValue, start)" />
-        <ul>
-          <li>
-            <code>searchValue</code> - <BadgeRequired /> value to search for in string
-          </li>
-          <li><code>start</code> - <BadgeOptional /> the default index value is <code>0</code></li>
-        </ul>
+  
+        <h5>Parameter Description:</h5>
+        <ParamDesc
+          isRequired={true}
+          paramName="searchValue"
+          paramNameWidth={115}
+          paramDesc="value to search for in string"
+        />
+        <ParamDesc
+          isRequired={false}
+          paramName="start"
+          paramNameWidth={115}
+        >
+          the default index value is <code>0</code>
+        </ParamDesc>
+        
         <div className="sublabel">Example:</div>
         <div className="example">
           <iframe

@@ -1,7 +1,5 @@
 import React from 'react';
 import "./sub-pages.css";
-import BadgeRequired from "../../BadgeRequired/BadgeRequired";
-import BadgeOptional from "../../BadgeOptional/BadgeOptional";
 import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 import ParamDesc from "../../ParamDesc/ParamDesc";
 
@@ -24,7 +22,8 @@ class StrIncludes extends React.Component {
         
         <div className="sublabel">Syntax:</div>
         <SyntaxHighlight syntax="string.includes(searchValue, start)" />
-        
+  
+        <h5>Parameter Description:</h5>
         <ParamDesc
           isRequired={true}
           paramName="searchValue"
@@ -35,8 +34,9 @@ class StrIncludes extends React.Component {
           isRequired={false}
           paramName="start"
           paramNameWidth={115}
-          paramDesc={<span>{"default value is "} <code>0</code></span>}
-        />
+        >
+          default value is <code>0</code>
+        </ParamDesc>
         
         <div className="sublabel">Example:</div>
         <div className="example">

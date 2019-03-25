@@ -1,5 +1,5 @@
 import React from "react";
-import BadgeRequired from "../../BadgeRequired/BadgeRequired";
+import ParamDesc from "../../ParamDesc/ParamDesc";
 import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 import "./sub-pages.css";
 
@@ -15,11 +15,15 @@ class StrMatch extends React.Component {
         </p>
         <div className="sublabel">Syntax:</div>
         <SyntaxHighlight syntax="string.match(regexp)" />
-        <ul>
-          <li>
-            <code>regexp</code> - <BadgeRequired /> regex expression to find match for
-          </li>
-        </ul>
+  
+        <h5>Parameter Description:</h5>
+        <ParamDesc
+          isRequired={true}
+          paramName="regexp"
+          paramNameWidth={75}
+          paramDesc="regex expression to find match in string"
+        />
+        
         <div className="sublabel">Example:</div>
         <div className="example">
           <iframe

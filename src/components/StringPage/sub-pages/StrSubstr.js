@@ -1,6 +1,5 @@
 import React from "react";
-import BadgeRequired from "../../BadgeRequired/BadgeRequired";
-import BadgeOptional from "../../BadgeOptional/BadgeOptional";
+import ParamDesc from "../../ParamDesc/ParamDesc";
 import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 import "./sub-pages.css";
 
@@ -20,14 +19,22 @@ class StrSubstr extends React.Component {
         </ul>
         <div className="sublabel">Syntax:</div>
         <SyntaxHighlight syntax="string.substr(start, length)" />
-        <ul>
-          <li>
-            <code>start</code> - <BadgeRequired /> the index of the first character to include in the returned substring
-          </li>
-          <li>
-            <code>length</code> - <BadgeOptional /> number of characters to extract. Default is <code>string.length</code>
-          </li>
-        </ul>
+  
+        <h5>Parameter Description:</h5>
+        <ParamDesc
+          isRequired={true}
+          paramName="start"
+          paramNameWidth={70}
+          paramDesc="the index of the first character to include in the returned substring"
+        />
+        <ParamDesc
+          isRequired={false}
+          paramName="length"
+          paramNameWidth={70}
+        >
+          number of characters to extract. Default is <code>string.length</code>
+        </ParamDesc>
+        
         <div className="sublabel">Example:</div>
         <div className="example">
           <iframe

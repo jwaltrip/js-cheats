@@ -1,6 +1,5 @@
 import React from "react";
-import BadgeRequired from "../../BadgeRequired/BadgeRequired";
-import BadgeOptional from "../../BadgeOptional/BadgeOptional";
+import ParamDesc from "../../ParamDesc/ParamDesc";
 import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 import "./sub-pages.css";
 
@@ -16,7 +15,7 @@ class StrLastIndexOf extends React.Component {
         </p>
         <ul>
           <li>
-            String is searched from end to beginning, and returns index if found <code>(0 = first index/character)</code>
+            String is searched from end to beginning, and returns <code>index</code> if found <code>(0 = first index/character)</code>
           </li>
           <li>
             Method returns <code>-1</code> if the value to search for is not found
@@ -25,12 +24,21 @@ class StrLastIndexOf extends React.Component {
         </ul>
         <div className="sublabel">Syntax:</div>
         <SyntaxHighlight syntax="string.lastIndexOf(searchValue, start)" />
-        <ul>
-          <li><code>searchValue</code> - <BadgeRequired /> value to search for in the string</li>
-          <li>
-            <code>start</code> - <BadgeOptional /> the default value is the beginning of the string
-          </li>
-        </ul>
+  
+        <h5>Parameter Description:</h5>
+        <ParamDesc
+          isRequired={true}
+          paramName="searchValue"
+          paramNameWidth={115}
+          paramDesc="value to search for in string"
+        />
+        <ParamDesc
+          isRequired={false}
+          paramName="start"
+          paramNameWidth={115}
+          paramDesc="the default is the length of the string"
+        />
+        
         <div className="sublabel">Example:</div>
         <div className="example">
           <iframe

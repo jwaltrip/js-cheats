@@ -1,5 +1,5 @@
 import React from "react";
-import BadgeRequired from "../../BadgeRequired/BadgeRequired";
+import ParamDesc from "../../ParamDesc/ParamDesc";
 import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 import "./sub-pages.css";
 
@@ -15,11 +15,15 @@ class StrRepeat extends React.Component {
         </p>
         <div className="sublabel">Syntax:</div>
         <SyntaxHighlight syntax="string.repeat(count)" />
-        <ul>
-          <li>
-            <code>count</code> - <BadgeRequired /> number of times the original string should be repeated in the new string
-          </li>
-        </ul>
+  
+        <h5>Parameter Description:</h5>
+        <ParamDesc
+          isRequired={true}
+          paramName="count"
+          paramNameWidth={60}
+          paramDesc="number of times the original string should be repeated in the new string"
+        />
+        
         <div className="sublabel">Example:</div>
         <div className="example">
           <iframe

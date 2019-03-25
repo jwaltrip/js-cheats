@@ -1,6 +1,5 @@
 import React from "react";
-import BadgeRequired from "../../BadgeRequired/BadgeRequired";
-import BadgeOptional from "../../BadgeOptional/BadgeOptional";
+import ParamDesc from "../../ParamDesc/ParamDesc";
 import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 import "./sub-pages.css";
 
@@ -22,10 +21,22 @@ class StrParseInt extends React.Component {
         </ul>
         <div className="sublabel">Syntax:</div>
         <SyntaxHighlight syntax="string.parseInt(string, radix)" />
-        <ul>
-          <li><code>string</code> - <BadgeRequired /> string containing a number to be converted to number type</li>
-          <li><code>radix</code> - <BadgeOptional /> default value is base <code>10</code></li>
-        </ul>
+  
+        <h5>Parameter Description:</h5>
+        <ParamDesc
+          isRequired={true}
+          paramName="string"
+          paramNameWidth={70}
+          paramDesc="string containing a number to be converted to number type"
+        />
+        <ParamDesc
+          isRequired={false}
+          paramName="radix"
+          paramNameWidth={70}
+        >
+          default value is base <code>10</code>
+        </ParamDesc>
+        
         <div className="sublabel">Example:</div>
         <div className="example">
           <iframe

@@ -1,5 +1,5 @@
 import React from "react";
-import BadgeRequired from "../../BadgeRequired/BadgeRequired";
+import ParamDesc from "../../ParamDesc/ParamDesc";
 import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 import "./sub-pages.css";
 
@@ -18,14 +18,21 @@ class StrReplace extends React.Component {
         </ul>
         <div className="sublabel">Syntax:</div>
         <SyntaxHighlight syntax="string.replace(searchValue, newValue)" />
-        <ul>
-          <li>
-            <code>searchValue</code> - <BadgeRequired /> value to search for in string to be replaced
-          </li>
-          <li>
-            <code>newValue</code> - <BadgeRequired /> the replacement value
-          </li>
-        </ul>
+  
+        <h5>Parameter Description:</h5>
+        <ParamDesc
+          isRequired={true}
+          paramName="searchValue"
+          paramNameWidth={115}
+          paramDesc="value to search for in string to be replaced"
+        />
+        <ParamDesc
+          isRequired={true}
+          paramName="newValue"
+          paramNameWidth={115}
+          paramDesc="the replacement value"
+        />
+        
         <div className="sublabel">Example:</div>
         <div className="example">
           <iframe

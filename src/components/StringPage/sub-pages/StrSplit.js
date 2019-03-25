@@ -1,5 +1,5 @@
 import React from "react";
-import BadgeOptional from "../../BadgeOptional/BadgeOptional";
+import ParamDesc from "../../ParamDesc/ParamDesc";
 import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 import "./sub-pages.css";
 
@@ -21,14 +21,21 @@ class StrSplit extends React.Component {
         </ul>
         <div className="sublabel">Syntax:</div>
         <SyntaxHighlight syntax="string.split(separator, limit)" />
-        <ul>
-          <li>
-            <code>seperator</code> - <BadgeOptional /> specifies the character where the string will be split
-          </li>
-          <li>
-            <code>limit</code> - <BadgeOptional /> integer that specifies the number of splits, items after not included
-          </li>
-        </ul>
+  
+        <h5>Parameter Description:</h5>
+        <ParamDesc
+          isRequired={false}
+          paramName="seperator"
+          paramNameWidth={90}
+          paramDesc="specifies the character where the string will be split"
+        />
+        <ParamDesc
+          isRequired={false}
+          paramName="limit"
+          paramNameWidth={90}
+          paramDesc="integer that specifies the number of splits, items after not included"
+        />
+        
         <div className="sublabel">Example:</div>
         <div className="example">
           <iframe

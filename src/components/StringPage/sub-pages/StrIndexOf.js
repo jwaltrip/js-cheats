@@ -1,7 +1,6 @@
 import React from "react";
-import BadgeRequired from "../../BadgeRequired/BadgeRequired";
-import BadgeOptional from "../../BadgeOptional/BadgeOptional";
 import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
+import ParamDesc from "../../ParamDesc/ParamDesc";
 import "./sub-pages.css";
 
 class StrIndexOf extends React.Component {
@@ -22,12 +21,21 @@ class StrIndexOf extends React.Component {
         </ul>
         <div className="sublabel">Syntax:</div>
         <SyntaxHighlight syntax="string.indexOf(searchValue, start)" />
-        <ul>
-          <li><code>searchValue</code> - <BadgeRequired /> value to search for in string</li>
-          <li>
-            <code>start</code> - <BadgeOptional /> default is the beginning of the string
-          </li>
-        </ul>
+
+        <h5>Parameter Description:</h5>
+        <ParamDesc
+          isRequired={true}
+          paramName="searchValue"
+          paramNameWidth={115}
+          paramDesc="value to search for in string"
+        />
+        <ParamDesc
+          isRequired={false}
+          paramName="start"
+          paramNameWidth={115}
+          paramDesc="default is the beginning of the string"
+        />
+        
         <div className="sublabel">Example:</div>
         <div className="example">
           <iframe

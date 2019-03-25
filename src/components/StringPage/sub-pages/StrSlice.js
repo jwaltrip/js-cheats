@@ -1,6 +1,5 @@
 import React from "react";
-import BadgeRequired from "../../BadgeRequired/BadgeRequired";
-import BadgeOptional from "../../BadgeOptional/BadgeOptional";
+import ParamDesc from "../../ParamDesc/ParamDesc";
 import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 import "./sub-pages.css";
 
@@ -23,14 +22,22 @@ class StrSlice extends React.Component {
         </ul>
         <div className="sublabel">Syntax:</div>
         <SyntaxHighlight syntax="string.slice(start, end)" />
-        <ul>
-          <li>
-            <code>start</code> - <BadgeRequired /> start index of where to begin string slice
-          </li>
-          <li>
-            <code>end</code> - <BadgeOptional /> end index of where to end string slice. Default value is <code>string.length</code>
-          </li>
-        </ul>
+  
+        <h5>Parameter Description:</h5>
+        <ParamDesc
+          isRequired={true}
+          paramName="start"
+          paramNameWidth={60}
+          paramDesc="start index of where to begin string slice"
+        />
+        <ParamDesc
+          isRequired={false}
+          paramName="end"
+          paramNameWidth={60}
+        >
+          end index of where to end string slice. Default value is <code>string.length</code>
+        </ParamDesc>
+        
         <div className="sublabel">Example:</div>
         <div className="example">
           <iframe
