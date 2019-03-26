@@ -1,35 +1,50 @@
-import React from 'react';
-import { Badge } from 'reactstrap';
-import Highlight from "react-highlight";
-// import PropTypes from 'prop-types';
+import React from "react";
+import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
+import ParamDesc from "../../ParamDesc/ParamDesc";
 
-class NumIsInteger extends React.Component {
-  render() {
-    return (
-      <div>
+const NumIsInteger = () => {
+  return (
+    <div>
       <h1>.isInteger()</h1>
-        <hr/>
-        <div className="sublabel">Description:</div>
-        <p className="subtext">The method determines whether a value an integer.
-          <ul> 
-            <li>The method also returns true if the value is of the type Number, and an integer (a number without decimals). Otherwise it returns false.</li>
-          </ul> 
-        </p>
-        <div className="sublabel">Syntax:</div>
-        <p className="subtext">
-          <Highlight className="javascript">
-            {".isInteger(number)"}
-          </Highlight>
-          <ul>
-              <li><code>Number</code> - <Badge color="primary">required</Badge></li>
-          </ul>
-          </p>
-        <div className="sublabel">Example:</div>
-        <div className="example">
-          <iframe height="400px" width="100%" src="https://repl.it/@Zgutier5/isInteger?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>        </div>
+      <hr />
+    
+      <div className="sublabel">Description:</div>
+      <p className="subtext">
+        The method determines whether a value an integer
+      </p>
+      <ul>
+        <li>
+          The method also returns <code>true</code> if the value is of the type <code>Number</code> <i>and</i> an <code>integer</code> (a number without decimals)
+        </li>
+        <li>Otherwise it returns <code>false</code></li>
+      </ul>
+    
+      <div className="sublabel">Syntax:</div>
+      <SyntaxHighlight syntax="Number.isInteger(number)" />
+    
+      <h5>Parameter Description:</h5>
+      <ParamDesc
+        isRequired={true}
+        paramName="number"
+        paramNameWidth={70}
+        paramDesc="value to check if it's integer or not"
+      />
+    
+      <div className="sublabel">Example:</div>
+      <div className="example">
+        <iframe
+          title="number-isInteger"
+          height="400px"
+          width="100%"
+          src="https://repl.it/@Zgutier5/isInteger?lite=true"
+          scrolling="no"
+          frameBorder="no"
+          allowFullScreen={true}
+          sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"
+        />
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default NumIsInteger;

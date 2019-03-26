@@ -1,4 +1,3 @@
-import React from 'react';
 // import sub-pages
 // these are sorted alphabetically (except for overview page)
 import NumOverview from './sub-pages/NumOverview';

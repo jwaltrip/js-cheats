@@ -1,45 +1,37 @@
 import React from "react";
-import "./sub-pages.css";
-// import PropTypes from 'prop-types';
+import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 
-class ArrSort extends React.Component {
-  render() {
-    return (
-      <div>
-        <h1>sort()</h1>
-        <hr />
-        <div className="sublabel">Description:</div>
-        <p className="subtext">Sorts the items of an array.</p>
-        <p className="subtext">
-          The sort order can be either alphabetic or numeric and either
-          ascending or descending.
-        </p>
-        <p className="subtext">
-          By default, the sort method sorts the values as strings in
-          alphabetical and ascending order.
-        </p>
-        <p className="subtext">This method chagnes the original array.</p>
-        <div className="sublabel">Syntax:</div>
-        <p className="subtext">array.sort()</p>
-        <div className="sublabel">Example:</div>
-        <div className="example">
-          {" "}
-          <iframe
-            height="400px"
-            width="100%"
-            src="https://repl.it/@William_Cruz/UtterWhoppingResources?lite=true"
-            scrolling="no"
-            frameborder="no"
-            allowtransparency="true"
-            allowfullscreen="true"
-            sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"
-          >
-            {" "}
-          </iframe>
-        </div>
+const ArrSort = () => {
+  return (
+    <div>
+      <h1>.sort()</h1>
+      <hr />
+    
+      <div className="sublabel">Description:</div>
+      <p className="subtext">Sorts the items of an array in alphabetical order (not numerical order)</p>
+      <ul>
+        <li>By default, the sort method sorts the values as <code>strings</code> in <code>alphabetical</code> and <code>ascending</code> order</li>
+        <li>This method mutates the original array</li>
+      </ul>
+    
+      <div className="sublabel">Syntax:</div>
+      <SyntaxHighlight syntax="const sortedArray = array.sort()" />
+    
+      <div className="sublabel">Example:</div>
+      <div className="example">
+        <iframe
+          title="arr_sort"
+          height="400px"
+          width="100%"
+          src="https://repl.it/@William_Cruz/UtterWhoppingResources?lite=true"
+          scrolling="no"
+          frameBorder="no"
+          allowFullScreen={true}
+          sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"
+        />
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default ArrSort;

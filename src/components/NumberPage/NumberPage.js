@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "./NumberPage.css";
-// import PropTypes from 'prop-types';
+import "../StringPage/sub-pages/sub-pages.css";
 import { Route } from 'react-router-dom';
 import SideNavbar from '../SideNavbar/SideNavbar';
 // import routes from external file to keep things clean
