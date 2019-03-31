@@ -18,6 +18,8 @@ import {
   DropdownMenu,
   DropdownItem } from 'reactstrap';
 
+// top navbar should organize the pages available 
+
 class TopNavbar extends Component {
 
   state = { isOpen: false };

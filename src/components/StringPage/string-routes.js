@@ -20,6 +20,9 @@ import StrSubstr from './sub-pages/StrSubstr';
 import StrSubString from './sub-pages/StrSubString';
 import StrValue from './sub-pages/StrValue';
 
+// this will be used for the side nav bar
+// all routes should push components
+
 const routes = [
   {
     path: "/strings/overview",

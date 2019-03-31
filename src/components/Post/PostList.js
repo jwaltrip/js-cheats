@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Post from "./Post";
 
+// will post the user input to side of submit form
+
 const PostList = ({ posts, deletePost }) => {
 
   const postItems = posts.map(post => (

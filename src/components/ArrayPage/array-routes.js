@@ -21,6 +21,9 @@ import ArrSplice from './sub-pages/ArrSplice';
 import ArrString from './sub-pages/ArrString';
 import ArrUnshift from './sub-pages/ArrUnshift';
 
+// this will be used for the side nav bar
+// all routes should push components
+
 const routes = [
   {
     path: "/arrays/overview",

@@ -5,6 +5,8 @@ import { withRouter } from 'react-router-dom';
 import { registerUser } from "../../actions/authActions";
 import classnames from 'classnames';
 
+// class will ask for user information to register
+
 class Register extends Component {
   constructor(props) {
     super(props);

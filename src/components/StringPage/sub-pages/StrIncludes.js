@@ -2,6 +2,8 @@ import React from 'react';
 import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 import ParamDesc from "../../ParamDesc/ParamDesc";
 
+// class changed into function to speed up optimization
+
 const StrIncludes = () => {
   return (
     <div>
