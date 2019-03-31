@@ -1,5 +1,7 @@
 import React from 'react';
 
+// class changed into function to speed up optimization
+
 const NumOverview = () => {
   return (
     <div>

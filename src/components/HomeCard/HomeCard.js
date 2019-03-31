@@ -5,6 +5,8 @@ import numbers from './numbersNotebook.gif';
 import "./HomeCard.css";
 import { Card, CardText, CardBody, CardTitle, CardImg } from 'reactstrap';
 
+// class changed into function to speed up optimization
+
 const HomeCard = (props) => {
   const { title, description } = props;
 

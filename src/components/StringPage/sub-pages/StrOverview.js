@@ -1,5 +1,7 @@
 import React from 'react';
 
+// class changed into function to speed up optimization
+
 const StrOverview = () => {
   return (
     <div>
