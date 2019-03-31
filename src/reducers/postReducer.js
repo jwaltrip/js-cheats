@@ -14,7 +14,7 @@ export default function(state = initialState, action) {
     case FETCH_POSTS:
       return action.payload;
     case ADD_POST:
-      return [...state, action.payload];
+      return [action.payload, ...state];
     case DELETE_POST:
       return state.filter(post => post._id !== action.payload);
     default:

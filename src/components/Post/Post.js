@@ -26,7 +26,7 @@ const Post = ({ title, body, id, onDelete }) => {
 Post.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   onDelete: PropTypes.func.isRequired
 };
 

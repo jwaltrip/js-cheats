@@ -1,0 +1,10 @@
+.left-navbar-links {
+  display: flex;
+  width: 36%;
+  flex-direction: row;
+  /*justify-content: space-around;*/
+}
+
+.left-navbar-links > li {
+  padding: auto 15px auto 15px;
+}

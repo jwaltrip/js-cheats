@@ -1,0 +1,52 @@
+.sublabel{
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.subtext{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.example{
+  margin-top: 20px;
+  margin-bottom: 40px;
+  margin-right: 75px;
+}
+
+.syntax {
+  max-width: 700px;
+  margin-top: 20px;
+}
+
+code {
+  background: #F0F0F0;
+  padding: 3px 5px 3px 5px;
+}
+
+h5 {
+  margin-bottom: 20px;
+}
+
+.params {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 7px;
+}
+
+.params > div {
+  margin: 0 5px 0 5px;
+}
+
+.param-name {
+  width: 115px;
+}
+
+/*.param-badge {*/
+  /*flex: 1 1 auto;*/
+/*}*/
+
+.param-desc {
+  margin-left: 10px;
+}
