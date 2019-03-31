@@ -5,6 +5,8 @@ import arrayData from "../ArrayPage/array-routes";
 import numberData from "../NumberPage/number-routes";
 import stringData from "../StringPage/string-routes";
 
+// TODO add String, Number, and Array headings to the autocomplete dropdown
+
 class TestPage extends Component {
   constructor(props) {
     super(props);
