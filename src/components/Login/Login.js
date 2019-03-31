@@ -5,6 +5,8 @@ import { withRouter } from 'react-router-dom';
 import { loginUser } from "../../actions/authActions";
 import classnames from 'classnames';
 
+// class will ask for user information to login
+
 class Login extends Component {
   constructor(props) {
     super(props);

@@ -3,6 +3,8 @@ import setAuthToken from '../setAuthToken';
 import jwt_decode from 'jwt-decode';
 import axios from 'axios';
 
+// this will request authentication token to be able to login
+
 export const registerUser = (user, history) => dispatch => {
   axios.post('/api/users/register', user)
     .then(res => history.push('/login'))

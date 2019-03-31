@@ -10,6 +10,9 @@ import NumToFixed from './sub-pages/NumToFixed';
 import NumToPrecision from './sub-pages/NumToPrecision';
 import NumToString from './sub-pages/NumToString';
 
+// this will be used for the side nav bar
+// all routes should push components
+
 const routes = [
   {
     path: "/numbers/overview",

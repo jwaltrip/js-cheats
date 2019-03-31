@@ -1,6 +1,8 @@
 import React from "react";
 import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 
+// class changed into function to speed up optimization
+
 const ArrShift = () => {
   return (
     <div>

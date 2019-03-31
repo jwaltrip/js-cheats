@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+// should format the information in form 
+
 class PostForm extends Component {
   state = {
     title: '',

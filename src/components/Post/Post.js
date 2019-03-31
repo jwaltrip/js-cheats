@@ -10,6 +10,8 @@ const styles = {
   borderRadius: '7px'
 };
 
+// should be add all user information into the designated field
+
 const Post = ({ title, body, id, onDelete }) => {
   return (
     <div style={ styles }>
