@@ -27,10 +27,10 @@ class App extends Component {
             <Route exact path="/register" component={ Register } />
             <Route exact path="/login" component={ Login } />
             <Route exact path="/blog" component={ PostContainer } />
-            <Route exact path="/test" component={ TestPage } />
             <Route path="/strings" component={ StringPage } />
             <Route path="/arrays" component={ ArrayPage } />
             <Route path="/numbers" component={ NumberPage } />
+            <Route exact path="/test" component={ TestPage } />
           </div>
         </div>
       </Router>
