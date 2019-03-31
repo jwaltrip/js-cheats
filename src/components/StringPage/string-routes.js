@@ -25,115 +25,153 @@ const routes = [
     path: "/strings/overview",
     name: "Strings Overview",
     exact: true,
-    comp: StrOverview
+    comp: StrOverview,
+    category: "Strings",
+    searchValue: "strings overview"
   },
   {
     path: "/strings/charAt",
     name: "charAt()",
     exact: true,
-    comp: StrCharAt
+    comp: StrCharAt,
+    category: "Strings",
+    searchValue: "strings charat"
   },
   {
     path: "/strings/concat",
     name: "concat()",
     exact: true,
-    comp: StrConcat
+    comp: StrConcat,
+    category: "Strings",
+    searchValue: "strings concat"
   },
   {
     path: "/strings/endswith",
     name: "endsWith()",
     exact: true,
-    comp: StrEndsWith
+    comp: StrEndsWith,
+    category: "Strings",
+    searchValue: "strings endswith"
   },
   {
     path: "/strings/includes",
     name: "includes()",
     exact: true,
-    comp: StrIncludes
+    comp: StrIncludes,
+    category: "Strings",
+    searchValue: "strings includes"
   },
   {
     path: "/strings/indexOf",
     name: "indexOf()",
     exact: true,
-    comp: StrIndexOf
+    comp: StrIndexOf,
+    category: "Strings",
+    searchValue: "strings indexof"
   },
   {
     path: "/strings/lastIndexOf",
     name: "lastIndexOf()",
     exact: true,
-    comp: StrLastIndexOf
+    comp: StrLastIndexOf,
+    category: "Strings",
+    searchValue: "strings lastindexof"
   },
   {
     path: "/strings/length",
     name: "length",
     exact: true,
-    comp: StrLength
+    comp: StrLength,
+    category: "Strings",
+    searchValue: "strings length"
   },
   {
     path: "/strings/match",
     name: "match()",
     exact: true,
-    comp: StrMatch
+    comp: StrMatch,
+    category: "Strings",
+    searchValue: "strings match"
   },
   {
     path: "/strings/parseInt",
     name: "parseInt()",
     exact: true,
-    comp: StrParseInt
+    comp: StrParseInt,
+    category: "Strings",
+    searchValue: "strings parseint"
   },
   {
     path: "/strings/repeat",
     name: "repeat()",
     exact: true,
-    comp: StrRepeat
+    comp: StrRepeat,
+    category: "Strings",
+    searchValue: "strings repeat"
   },
   {
     path: "/strings/replace",
     name: "replace()",
     exact: true,
-    comp: StrReplace
+    comp: StrReplace,
+    category: "Strings",
+    searchValue: "strings replace"
   },
   {
     path: "/strings/search",
     name: "search()",
     exact: true,
-    comp: StrSearch
+    comp: StrSearch,
+    category: "Strings",
+    searchValue: "strings search"
   },
   {
     path: "/strings/slice",
     name: "slice()",
     exact: true,
-    comp: StrSlice
+    comp: StrSlice,
+    category: "Strings",
+    searchValue: "strings slice"
   },
   {
     path: "/strings/split",
     name: "split()",
     exact: true,
-    comp: StrSplit
+    comp: StrSplit,
+    category: "Strings",
+    searchValue: "strings split"
   },
   {
     path: "/strings/startswith",
     name: "startsWith()",
     exact: true,
-    comp: StrStartsWith
+    comp: StrStartsWith,
+    category: "Strings",
+    searchValue: "strings startswith"
   },
   {
     path: "/strings/substr",
     name: "substr()",
     exact: true,
-    comp: StrSubstr
+    comp: StrSubstr,
+    category: "Strings",
+    searchValue: "strings substr"
   },
   {
     path: "/strings/substring",
     name: "substring()",
     exact: true,
-    comp: StrSubString
+    comp: StrSubString,
+    category: "Strings",
+    searchValue: "strings substring"
   },
   {
     path: "/strings/valueof",
     name: "valueOf()",
     exact: true,
-    comp: StrValue
+    comp: StrValue,
+    category: "Strings",
+    searchValue: "strings valueof"
   }
 ];
 
