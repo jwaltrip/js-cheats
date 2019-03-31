@@ -13,6 +13,7 @@ import Home from "./components/Home/Home";
 import StringPage from "./components/StringPage/StringPage";
 import NumberPage from "./components/NumberPage/NumberPage";
 import ArrayPage from "./components/ArrayPage/ArrayPage";
+import TestPage from "./components/TestPage/TestPage";
 
 class App extends Component {
   render() {
@@ -29,6 +30,7 @@ class App extends Component {
             <Route path="/strings" component={ StringPage } />
             <Route path="/arrays" component={ ArrayPage } />
             <Route path="/numbers" component={ NumberPage } />
+            <Route exact path="/test" component={ TestPage } />
           </div>
         </div>
       </Router>

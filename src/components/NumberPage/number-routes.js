@@ -10,60 +10,81 @@ import NumToFixed from './sub-pages/NumToFixed';
 import NumToPrecision from './sub-pages/NumToPrecision';
 import NumToString from './sub-pages/NumToString';
 
+// this will be used for the side nav bar
+// all routes should push components
+
 const routes = [
   {
     path: "/numbers/overview",
     name: "Numbers Overview",
     exact: true,
-    comp: NumOverview
+    comp: NumOverview,
+    category: "Numbers",
+    searchValue: "numbers overview"
   },
   {
     path: "/numbers/isinteger",
     name: "isInteger()",
     exact: true,
-    comp: NumIsInteger
+    comp: NumIsInteger,
+    category: "Numbers",
+    searchValue: "numbers isinteger"
   },
   {
     path: "/numbers/number",
     name: "Number()",
     exact: true,
-    comp: NumNumber
+    comp: NumNumber,
+    category: "Numbers",
+    searchValue: "numbers number"
   },
   {
     path: "/numbers/parseFloat",
     name: "parseFloat()",
     exact: true,
-    comp: NumParseFloat
+    comp: NumParseFloat,
+    category: "Numbers",
+    searchValue: "numbers parsefloat"
   },
   {
     path: "/numbers/parseint",
     name: "parseInt()",
     exact: true,
-    comp: NumParseInt
+    comp: NumParseInt,
+    category: "Numbers",
+    searchValue: "numbers parseint"
   },
   {
     path: "/numbers/toExpoenential",
     name: "toExpoenential()",
     exact: true,
-    comp: NumToExponentail
+    comp: NumToExponentail,
+    category: "Numbers",
+    searchValue: "numbers toexponential"
   },
   {
     path: "/numbers/toFixed",
     name: "toFixed()",
     exact: true,
-    comp: NumToFixed
+    comp: NumToFixed,
+    category: "Numbers",
+    searchValue: "numbers tofixed"
   },
   {
     path: "/numbers/toPrecision",
     name: "toPrecision()",
     exact: true,
-    comp: NumToPrecision
+    comp: NumToPrecision,
+    category: "Numbers",
+    searchValue: "numbers toprecision"
   },
   {
     path: "/numbers/toString",
     name: "toString()",
     exact: true,
-    comp: NumToString
+    comp: NumToString,
+    category: "Numbers",
+    searchValue: "numbers tostring"
   }
 ];
 

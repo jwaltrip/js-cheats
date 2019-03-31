@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import HomeCard from '../HomeCard/HomeCard';
 import { Row, Col } from 'reactstrap';
 
+// class changed into function to speed up optimization
+
 const Home = () => {
   const loggedInContent = <p>Have any questions? Check out our <Link to="/blog">Blog!</Link></p>;
 

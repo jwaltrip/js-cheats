@@ -1,6 +1,8 @@
 import React from 'react';
 import Highlight from 'react-highlight';
 
+// will create a gray backround for text
+
 const SyntaxHighlight = ({ syntax }) => {
   return (
     <div className="syntax">

@@ -8,15 +8,19 @@ import rootReducer from './reducers';
 const initialState = {};
 
 // add any additional middleware to this array
-const middleware = [thunk];
+const middlewareArr = [thunk];
 
+// apply the middleware
+const middleware = applyMiddleware(...middlewareArr);
+
+// this is to fix redux dev tools not being installed
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+// create store
 const store = createStore(
   rootReducer,
   initialState,
-  compose(
-    applyMiddleware(...middleware),
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-  )
+  composeEnhancers(middleware)
 );
 
 export default store;
