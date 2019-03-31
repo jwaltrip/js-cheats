@@ -2,6 +2,8 @@ import React from "react";
 import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 import ParamDesc from "../../ParamDesc/ParamDesc";
 
+// class changed into function to speed up optimization
+
 const ArrConcat = () => {
   return (
     <div>
@@ -15,21 +17,21 @@ const ArrConcat = () => {
       </ul>
     
       <div className="sublabel">Syntax:</div>
-      <SyntaxHighlight syntax="const newArray = oldArray.concat(array1, array2, ..., arrayN)" />
+        <SyntaxHighlight syntax="const newArray = oldArray.concat(array1, array2, ..., arrayN)" />
     
       <h5>Parameter Description:</h5>
-      <ParamDesc
+        <ParamDesc
         isRequired={true}
         paramName="array1"
         paramNameWidth={75}
-      >
+        >
         the first <code>array</code> to join with <code>oldArray</code>
-      </ParamDesc>
-      <ParamDesc
+        </ParamDesc>
+        <ParamDesc
         isRequired={false}
         paramName="array2"
         paramNameWidth={75}
-      >
+        >
         additional <code>array</code> to join with <code>oldArray</code>
       </ParamDesc>
       <ParamDesc

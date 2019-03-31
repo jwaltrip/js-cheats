@@ -2,6 +2,8 @@ import React from "react";
 import ParamDesc from "../../ParamDesc/ParamDesc";
 import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 
+// class changed into function to speed up optimization
+
 const StrStartsWith = () => {
   return (
     <div>

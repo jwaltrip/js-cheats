@@ -2,6 +2,8 @@ import React from 'react';
 import BadgeRequired from "../BadgeRequired/BadgeRequired";
 import BadgeOptional from "../BadgeOptional/BadgeOptional";
 
+// this function should had a syntanx hightlight to the text, and with required props.
+
 const ParamDesc = ({ isRequired, paramName, paramDesc, paramNameWidth, children }) => {
   // check if param is required or optional
   let badge;

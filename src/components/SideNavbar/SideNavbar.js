@@ -3,6 +3,8 @@ import './SideNavbar.css';
 import { Nav, NavItem, NavLink } from 'reactstrap';
 import { NavLink as Link } from 'react-router-dom';
 
+// side bar will organize all components 
+
 class SideNavbar extends React.Component {
   render() {
     const { routes } = this.props;
