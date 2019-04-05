@@ -9,6 +9,8 @@ import NumToExponentail from './sub-pages/NumToExpoenential';
 import NumToFixed from './sub-pages/NumToFixed';
 import NumToPrecision from './sub-pages/NumToPrecision';
 import NumToString from './sub-pages/NumToString';
+import MathAbs from './sub-pages/MathAbs';
+import MathCeil from './sub-pages/MathCeil';
 
 // this will be used for the side nav bar
 // all routes should push components
@@ -85,6 +87,22 @@ const routes = [
     comp: NumToString,
     category: "Numbers",
     searchValue: "numbers tostring"
+  },
+  {
+    path: "/numbers/MathAbs",
+    name: "Math.abs()",
+    exact: true,
+    comp: MathAbs,
+    category: "Numbers",
+    searchValue: "numbers mathabs"
+  },
+  {
+    path: "/numbers/MathCeil",
+    name: "Math.ceil()",
+    exact: true,
+    comp: MathCeil,
+    category: "Numbers",
+    searchValue: "numbers mathceil"
   }
 ];
 
