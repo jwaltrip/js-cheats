@@ -12,7 +12,7 @@ const MathCeil = () => {
     
       <div className="sublabel">Description:</div>
       <p className="subtext">
-        A Math function that return the smallest integer greater than or equal to a given number. (takes in your number and rounds it up to the nearest integer)
+        A Math function that return the smallest integer greater than or equal to a given number. (takes in an argument and rounds it up to the nearest integer)
       </p>
       <ul>
         <li><code>Math.ceil(null)</code> returns integer 0 and does not give a <code>NaN</code> error.</li>

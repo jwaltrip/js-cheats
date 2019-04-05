@@ -11,6 +11,9 @@ import NumToPrecision from './sub-pages/NumToPrecision';
 import NumToString from './sub-pages/NumToString';
 import MathAbs from './sub-pages/MathAbs';
 import MathCeil from './sub-pages/MathCeil';
+import MathFloor from './sub-pages/MathFloor';
+import MathRound from './sub-pages/MathRound';
+import MathPow from './sub-pages/MathPow';
 
 // this will be used for the side nav bar
 // all routes should push components
@@ -103,6 +106,30 @@ const routes = [
     comp: MathCeil,
     category: "Numbers",
     searchValue: "numbers mathceil"
+  },
+  {
+    path: "/numbers/MathFloor",
+    name: "Math.floor()",
+    exact: true,
+    comp: MathFloor,
+    category: "Numbers",
+    searchValue: "numbers mathfloor"
+  },
+  {
+    path: "/numbers/MathRound",
+    name: "Math.round()",
+    exact: true,
+    comp: MathRound,
+    category: "Numbers",
+    searchValue: "numbers mathround"
+  },
+  {
+    path: "/numbers/MathPow",
+    name: "Math.pow()",
+    exact: true,
+    comp: MathPow,
+    category: "Numbers",
+    searchValue: "numbers mathpow"
   }
 ];
 
