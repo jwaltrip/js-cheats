@@ -14,6 +14,9 @@ import MathCeil from './sub-pages/MathCeil';
 import MathFloor from './sub-pages/MathFloor';
 import MathRound from './sub-pages/MathRound';
 import MathPow from './sub-pages/MathPow';
+import MathRandom from './sub-pages/MathRandom';
+import MathMax from './sub-pages/MathMax';
+import MathMin from './sub-pages/MathMin';
 
 // this will be used for the side nav bar
 // all routes should push components
@@ -130,6 +133,30 @@ const routes = [
     comp: MathPow,
     category: "Numbers",
     searchValue: "numbers mathpow"
+  },
+  {
+    path: "/numbers/MathRandom",
+    name: "Math.random()",
+    exact: true,
+    comp: MathRandom,
+    category: "Numbers",
+    searchValue: "numbers mathrandom"
+  },
+  {
+    path: "/numbers/MathMax",
+    name: "Math.max()",
+    exact: true,
+    comp: MathMax,
+    category: "Numbers",
+    searchValue: "numbers mathmax"
+  },
+  {
+    path: "/numbers/MathMin",
+    name: "Math.min()",
+    exact: true,
+    comp: MathMin,
+    category: "Numbers",
+    searchValue: "numbers mathmin"
   }
 ];
 
