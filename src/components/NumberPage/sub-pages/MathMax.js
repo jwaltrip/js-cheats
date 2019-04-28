@@ -1,6 +1,7 @@
 import React from "react";
 import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
 import ParamDesc from "../../ParamDesc/ParamDesc";
+import ReturnDesc from "../../ReturnDesc/ReturnDesc";
 
 // class changed into function to speed up optimization
 
@@ -34,6 +35,13 @@ const MathMax = () => {
         paramName="value2"
         paramNameWidth={70}
         paramDesc="number"
+      />
+
+      <h5>Return Value:</h5>
+      <ReturnDesc
+        paramName="returns"
+        paramNameWidth={70}
+        paramDesc="the largest of zero or more numbers"
       />
     
       <div className="sublabel">Example:</div>
