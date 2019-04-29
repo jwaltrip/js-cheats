@@ -38,13 +38,13 @@ class TopNavbar extends Component {
 
     const leftNavLinksAuth = [
       <NavItem key='topnav-left-2'>
-        <NavLink tag={Link} to="/strings/overview">Strings</NavLink>
+        <NavLink tag={Link} to="/strings/overview" style={{ paddingRight: 7 }}>Strings</NavLink>
       </NavItem>,
       <NavItem key='topnav-left-3'>
-        <NavLink tag={Link} to="/numbers/overview">Numbers</NavLink>
+        <NavLink tag={Link} to="/numbers/overview" style={{ paddingRight: 7 }}>Numbers</NavLink>
       </NavItem>,
       <NavItem key='topnav-left-4'>
-        <NavLink tag={Link} to="/arrays/overview">Arrays</NavLink>
+        <NavLink tag={Link} to="/arrays/overview" style={{ paddingRight: 7 }}>Arrays</NavLink>
       </NavItem>,
       <span key='topnav-sep' style={{ margin: 'auto 5px auto 5px', color: 'rgba(255,255,255,.3)' }}>|</span>,
       <NavItem key='topnav-left-1'>
@@ -54,13 +54,13 @@ class TopNavbar extends Component {
   
     const leftNavLinksNoAuth = [
       <NavItem key='topnav-left-2'>
-        <NavLink tag={Link} to="/strings/overview">Strings</NavLink>
+        <NavLink tag={Link} to="/strings/overview" style={{ paddingRight: 7 }}>Strings</NavLink>
       </NavItem>,
       <NavItem key='topnav-left-3'>
-        <NavLink tag={Link} to="/numbers/overview">Numbers</NavLink>
+        <NavLink tag={Link} to="/numbers/overview" style={{ paddingRight: 7 }}>Numbers</NavLink>
       </NavItem>,
       <NavItem key='topnav-left-4'>
-        <NavLink tag={Link} to="/arrays/overview">Arrays</NavLink>
+        <NavLink tag={Link} to="/arrays/overview" style={{ paddingRight: 7 }}>Arrays</NavLink>
       </NavItem>,
     ];
 
