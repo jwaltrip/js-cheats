@@ -19,3 +19,13 @@ nav {
   margin: 0 15px;
   padding: 0 15px;
 }
+
+/* Mobile responsive CSS */
+
+.mobile-page-container {
+  padding: 15px;
+}
+
+.mobile-subpage-container {
+
+}
