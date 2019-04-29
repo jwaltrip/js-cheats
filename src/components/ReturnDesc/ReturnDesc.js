@@ -1,0 +1,36 @@
+import React from 'react';
+// import BadgeRequired from "../BadgeRequired/BadgeRequired";
+// import BadgeOptional from "../BadgeOptional/BadgeOptional";
+
+// this function should had a syntanx hightlight to the text, and with required props.
+
+const ReturnDesc = ({ paramName, paramDesc, paramNameWidth, children }) => {
+  // check if param is required or optional
+//   let badge;
+//   if (isRequired) {
+//     badge = <BadgeRequired />;
+//   } else {
+//     badge = <BadgeOptional />;
+//   }
+  
+  // check if @paramDesc is a child element rather than passed as a prop
+  let desc;
+  if (children && !paramDesc) {
+    desc = children;
+  } else {
+    desc = paramDesc;
+  }
+  
+  return (
+    <div className="params">
+      <div className="param-name" style={{ width: paramNameWidth, minWidth: 10 }}>
+        <code>{paramName}</code>
+      </div>
+      <div>
+        <span className="param-desc"> {desc} </span>
+      </div>
+    </div>
+  );
+};
+
+export default ReturnDesc;

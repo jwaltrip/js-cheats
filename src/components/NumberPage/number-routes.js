@@ -9,6 +9,14 @@ import NumToExponentail from './sub-pages/NumToExpoenential';
 import NumToFixed from './sub-pages/NumToFixed';
 import NumToPrecision from './sub-pages/NumToPrecision';
 import NumToString from './sub-pages/NumToString';
+import MathAbs from './sub-pages/MathAbs';
+import MathCeil from './sub-pages/MathCeil';
+import MathFloor from './sub-pages/MathFloor';
+import MathRound from './sub-pages/MathRound';
+import MathPow from './sub-pages/MathPow';
+import MathRandom from './sub-pages/MathRandom';
+import MathMax from './sub-pages/MathMax';
+import MathMin from './sub-pages/MathMin';
 
 // this will be used for the side nav bar
 // all routes should push components
@@ -85,6 +93,70 @@ const routes = [
     comp: NumToString,
     category: "Numbers",
     searchValue: "numbers tostring"
+  },
+  {
+    path: "/numbers/MathAbs",
+    name: "Math.abs()",
+    exact: true,
+    comp: MathAbs,
+    category: "Numbers",
+    searchValue: "numbers mathabs"
+  },
+  {
+    path: "/numbers/MathCeil",
+    name: "Math.ceil()",
+    exact: true,
+    comp: MathCeil,
+    category: "Numbers",
+    searchValue: "numbers mathceil"
+  },
+  {
+    path: "/numbers/MathFloor",
+    name: "Math.floor()",
+    exact: true,
+    comp: MathFloor,
+    category: "Numbers",
+    searchValue: "numbers mathfloor"
+  },
+  {
+    path: "/numbers/MathRound",
+    name: "Math.round()",
+    exact: true,
+    comp: MathRound,
+    category: "Numbers",
+    searchValue: "numbers mathround"
+  },
+  {
+    path: "/numbers/MathPow",
+    name: "Math.pow()",
+    exact: true,
+    comp: MathPow,
+    category: "Numbers",
+    searchValue: "numbers mathpow"
+  },
+  {
+    path: "/numbers/MathRandom",
+    name: "Math.random()",
+    exact: true,
+    comp: MathRandom,
+    category: "Numbers",
+    searchValue: "numbers mathrandom"
+  },
+  {
+    path: "/numbers/MathMax",
+    name: "Math.max()",
+    exact: true,
+    comp: MathMax,
+    category: "Numbers",
+    searchValue: "numbers mathmax"
+  },
+  {
+    path: "/numbers/MathMin",
+    name: "Math.min()",
+    exact: true,
+    comp: MathMin,
+    category: "Numbers",
+    searchValue: "numbers mathmin"
   }
 ];
 
