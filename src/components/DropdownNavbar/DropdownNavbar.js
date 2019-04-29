@@ -74,6 +74,12 @@ class DropdownNavbar extends React.Component {
   };
 
   render() {
+    const { pathname } = this.props.location;
+    const path = pathname.split('/');
+    const category = path[1];
+    const currFn = path[2];
+    // console.log(pathname);
+    
     return (
       <div style={{ width: "100%", paddingBottom: 20 }}>
         <UncontrolledDropdown
@@ -90,7 +96,7 @@ class DropdownNavbar extends React.Component {
             color="primary"
             style={{ width: "80%" }}
           >
-            Menu {"     "}
+            <span style={{ textTransform: "capitalize" }}>{ category } - </span> { currFn + "()             " }
           </DropdownToggle>
           <DropdownMenu
             modifiers={{
