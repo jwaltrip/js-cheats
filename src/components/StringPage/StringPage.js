@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './StringPage.css';
 import "./sub-pages/sub-pages.css";
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Responsive from 'react-responsive';
 import SideNavbar from "../SideNavbar/SideNavbar";
 import DropdownNavbar from "../DropdownNavbar/DropdownNavbar";
@@ -21,15 +21,16 @@ class StringPage extends Component {
             <SideNavbar routes={routes} />
     
             <div className='subpage-container'>
-    
-              {routes.map((route, idx) => (
-                <Route
-                  key={idx}
-                  exact={route.exact}
-                  path={route.path}
-                  component={route.comp}
-                />
-              ))}
+              <Switch>
+                {routes.map((route, idx) => (
+                  <Route
+                    key={idx}
+                    exact={route.exact}
+                    path={route.path}
+                    component={route.comp}
+                  />
+                ))}
+              </Switch>
     
             </div>
           </div>
