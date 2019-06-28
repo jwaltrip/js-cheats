@@ -42,6 +42,7 @@ class TestPage extends Component {
   
   dropdownItemRender = (item, highlighted) => {
     // define styles for each catergory title
+    // and make sure that the title's always display in the list
     let titleStyle = {};
     if (item.name.endsWith("Overview")) {
       if (highlighted) {
@@ -49,7 +50,7 @@ class TestPage extends Component {
       } else {
         titleStyle.backgroundColor = "#686868";
       }
-      // titleStyle.textAlign = "center";
+      
       titleStyle.color = "white";
       titleStyle.fontWeight = "bold";
     }
@@ -69,9 +70,14 @@ class TestPage extends Component {
   }
   
   shouldItemRender = (item, value) => {
-    // console.log(`item: ${JSON.stringify(item, null, 4)}`);
+    console.log(`item: ${JSON.stringify(item, null, 4)}`);
     // console.log(`value: ${value}`);
     return item.searchValue.toLowerCase().indexOf(value.toLowerCase()) > -1 || item.searchValue.toLowerCase().endsWith("overview");
+  }
+  
+  handleOnSubmit = (e) => {
+    e.preventDefault();
+    
   }
   
   render() {
