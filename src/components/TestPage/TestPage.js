@@ -27,7 +27,7 @@ class TestPage extends Component {
   // it increases performance not to have the components in the search list
   createSearchList = () => {
     // combines the data for: arrays, strings, and numbers using spread operator
-    const completeList = [...arrayData, ...numberData, ...stringData];
+    const completeList = [...arrayData, ...stringData, ...numberData];
     // filter the list, remove the "comp" key, add id
     const filteredList = completeList.map((item, idx) => {
       // delete the component attached to the current object
@@ -40,6 +40,40 @@ class TestPage extends Component {
     return filteredList;
   };
   
+  dropdownItemRender = (item, highlighted) => {
+    // define styles for each catergory title
+    let titleStyle = {};
+    if (item.name.endsWith("Overview")) {
+      if (highlighted) {
+        titleStyle.backgroundColor = "#888";
+      } else {
+        titleStyle.backgroundColor = "#686868";
+      }
+      // titleStyle.textAlign = "center";
+      titleStyle.color = "white";
+      titleStyle.fontWeight = "bold";
+    }
+    
+    // dropdown item style
+    const dropdownStyle = {
+      padding: "5px 5px 5px 15px",
+      fontSize: "16px"
+    }
+    
+    return <div
+      key={item.id}
+      style={{ backgroundColor: highlighted ? '#ddd' : '#eee', ...dropdownStyle, ...titleStyle }}
+    >
+      {item.name}
+    </div>;
+  }
+  
+  shouldItemRender = (item, value) => {
+    // console.log(`item: ${JSON.stringify(item, null, 4)}`);
+    // console.log(`value: ${value}`);
+    return item.searchValue.toLowerCase().indexOf(value.toLowerCase()) > -1 || item.searchValue.toLowerCase().endsWith("overview");
+  }
+  
   render() {
     const { items } = this.state;
     
@@ -50,22 +84,25 @@ class TestPage extends Component {
           <hr />
           <br />
   
-          <ReactAutocomplete
-            items={items}
-            shouldItemRender={(item, value) => item.searchValue.toLowerCase().indexOf(value.toLowerCase()) > -1}
-            getItemValue={item => item.name}
-            renderItem={(item, highlighted) =>
-              <div
-                key={item.id}
-                style={{ backgroundColor: highlighted ? '#eee' : 'transparent'}}
-              >
-                {item.name}
-              </div>
-            }
-            value={this.state.value}
-            onChange={e => this.setState({ value: e.target.value })}
-            onSelect={value => this.setState({ value })}
-          />
+          <form className="form-inline my-2 my-lg-0">
+  
+            <ReactAutocomplete
+              items={items}
+              shouldItemRender={this.shouldItemRender}
+              getItemValue={item => item.name}
+              renderItem={this.dropdownItemRender}
+              value={this.state.value}
+              onChange={e => this.setState({ value: e.target.value })}
+              onSelect={value => this.setState({ value })}
+              inputProps={{
+                  className: "form-control mr-2",
+                  placeholder: "Search..."
+                }}
+            />
+            
+            <button className="btn btn-outline-success my-2 my-sm-0 mr-3" type="submit">Search</button>
+          </form>
+          
         </Container>
       </div>
     );
