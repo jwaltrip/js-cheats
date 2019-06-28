@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Container } from "reactstrap";
+import { withRouter } from "react-router";
 import ReactAutocomplete from "react-autocomplete";
 import arrayData from "../ArrayPage/array-routes";
 import numberData from "../NumberPage/number-routes";
@@ -85,8 +86,9 @@ class TestPage extends Component {
     // get current value in the search bar
     const searchValue = this.state.value;
     // test to see if searchValue is a correct full search term
-    
-    
+    if (this.state.currentItem !== null) {
+      this.props.history.push(this.state.currentItem.path);
+    }
   }
   
   render() {
@@ -100,7 +102,6 @@ class TestPage extends Component {
           <br />
   
           <form className="form-inline my-2 my-lg-0" onSubmit={this.handleOnSubmit}>
-  
             <ReactAutocomplete
               ref={el => this.input = el}
               items={items}
@@ -116,7 +117,6 @@ class TestPage extends Component {
                   placeholder: "Search..."
                 }}
             />
-            
             <button className="btn btn-outline-success my-2 my-sm-0 mr-3" type="submit" onClick={this.handleOnSubmit}>Search</button>
           </form>
           
@@ -126,4 +126,4 @@ class TestPage extends Component {
   }
 }
 
-export default TestPage;
+export default withRouter(TestPage);

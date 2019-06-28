@@ -22,14 +22,14 @@ class StringPage extends Component {
     
             <div className='subpage-container'>
     
-                {routes.map((route, idx) => (
-                  <Route
-                    key={idx}
-                    exact={route.exact}
-                    path={route.path}
-                    component={route.comp}
-                  />
-                ))}
+              {routes.map((route, idx) => (
+                <Route
+                  key={idx}
+                  exact={route.exact}
+                  path={route.path}
+                  component={route.comp}
+                />
+              ))}
     
             </div>
           </div>
