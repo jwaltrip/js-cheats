@@ -12,8 +12,11 @@ class TestPage extends Component {
     super(props);
     this.state = {
       value: "",
-      items: []
+      items: [],
+      currentItem: null
     };
+  
+    // this.input = React.createRef();
   }
   
   // create the search list when component is rendered
@@ -75,8 +78,14 @@ class TestPage extends Component {
     return item.searchValue.toLowerCase().indexOf(value.toLowerCase()) > -1 || item.searchValue.toLowerCase().endsWith("overview");
   }
   
+  isItemSelectable = (item) => !item.name.endsWith("Overview");
+  
   handleOnSubmit = (e) => {
     e.preventDefault();
+    // get current value in the search bar
+    const searchValue = this.state.value;
+    // test to see if searchValue is a correct full search term
+    
     
   }
   
@@ -90,23 +99,25 @@ class TestPage extends Component {
           <hr />
           <br />
   
-          <form className="form-inline my-2 my-lg-0">
+          <form className="form-inline my-2 my-lg-0" onSubmit={this.handleOnSubmit}>
   
             <ReactAutocomplete
+              ref={el => this.input = el}
               items={items}
               shouldItemRender={this.shouldItemRender}
+              isItemSelectable={this.isItemSelectable}
               getItemValue={item => item.name}
               renderItem={this.dropdownItemRender}
               value={this.state.value}
-              onChange={e => this.setState({ value: e.target.value })}
-              onSelect={value => this.setState({ value })}
+              onChange={e => this.setState({ value: e.target.value, currentItem: null })}
+              onSelect={(value, item) => this.setState({ value, currentItem: item })}
               inputProps={{
                   className: "form-control mr-2",
                   placeholder: "Search..."
                 }}
             />
             
-            <button className="btn btn-outline-success my-2 my-sm-0 mr-3" type="submit">Search</button>
+            <button className="btn btn-outline-success my-2 my-sm-0 mr-3" type="submit" onClick={this.handleOnSubmit}>Search</button>
           </form>
           
         </Container>
