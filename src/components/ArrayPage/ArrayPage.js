@@ -16,8 +16,8 @@ const Default = props => <Responsive {...props} minWidth={768} />;
 class ArrayPage extends Component {
   render() {
     const { match } = this.props;
-    console.log(`match.path: ${match.path}`);
-    console.log(`match.url:  ${match.url}`);
+    // console.log(`match.path: ${match.path}`);
+    // console.log(`match.url:  ${match.url}`);
     
     return (
       <>
