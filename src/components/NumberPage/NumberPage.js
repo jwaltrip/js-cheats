@@ -5,6 +5,7 @@ import { Route } from 'react-router-dom';
 import Responsive from 'react-responsive';
 import SideNavbar from '../SideNavbar/SideNavbar';
 import DropdownNavbar from "../DropdownNavbar/DropdownNavbar";
+import NumberSubPage from "./NumberSubPage"
 // import routes from external file to keep things clean
 import routes from "./number-routes";
 
@@ -14,6 +15,10 @@ const Default = props => <Responsive {...props} minWidth={768} />;
 
 class NumberPage extends Component {
   render() {
+    const { match } = this.props;
+    // console.log(`match.path: ${match.path}`);
+    // console.log(`match.url:  ${match.url}`);
+    
     return (
       <>
         <Default>
@@ -21,15 +26,8 @@ class NumberPage extends Component {
             <SideNavbar routes={routes} />
     
             <div className='subpage-container'>
-    
-              {routes.map((route, idx) => (
-                <Route
-                  key={idx}
-                  exact={route.exact}
-                  path={route.path}
-                  component={route.comp}
-                />
-              ))}
+  
+              <Route path={`${match.path}/:subTopic`} component={NumberSubPage} />
     
             </div>
           </div>
@@ -41,15 +39,8 @@ class NumberPage extends Component {
             <hr />
     
             <div className='mobile-subpage-container'>
-      
-              {routes.map((route, idx) => (
-                <Route
-                  key={idx}
-                  exact={route.exact}
-                  path={route.path}
-                  component={route.comp}
-                />
-              ))}
+  
+              <Route path={`${match.path}/:subTopic`} component={NumberSubPage} />
     
             </div>
           </div>
