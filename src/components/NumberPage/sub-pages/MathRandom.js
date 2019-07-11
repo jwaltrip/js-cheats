@@ -1,6 +1,6 @@
 import React from "react";
 import SyntaxHighlight from "../../SyntaxHighlight/SyntaxHighlight";
-import ParamDesc from "../../ParamDesc/ParamDesc";
+// import ParamDesc from "../../ParamDesc/ParamDesc";
 
 // class changed into function to speed up optimization
 
@@ -27,14 +27,13 @@ const MathRandom = () => {
     
       <div className="sublabel">Example:</div>
       <div className="example">
-        <iframe 
-            height="400px" 
-            width="100%" 
-            src="https://repl.it/@sarahcheatham/number-Mathrandom?lite=true" 
-            scrolling="no" 
-            frameBorder="no"  
-            allowfullscreen="true" 
-            sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"
+        <iframe
+          title="math-random"
+          height="400px"
+          width="100%"
+          src="https://repl.it/@sarahcheatham/number-Mathrandom?lite=true"
+          allowFullScreen={true}
+          sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"
         />
       </div>
     </div>

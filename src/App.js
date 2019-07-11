@@ -13,7 +13,7 @@ import Home from "./components/Home/Home";
 import StringPage from "./components/StringPage/StringPage";
 import NumberPage from "./components/NumberPage/NumberPage";
 import ArrayPage from "./components/ArrayPage/ArrayPage";
-import TestPage from "./components/TestPage/TestPage";
+// import TestPage from "./components/TestPage/TestPage";
 
 class App extends Component {
   render() {
@@ -24,13 +24,13 @@ class App extends Component {
           <TopNavbar />
           <div style={{ marginTop: 72 }}>
             <Route exact path="/" component={ Home } />
-            <Route exact path="/register" component={ Register } />
-            <Route exact path="/login" component={ Login } />
-            <Route exact path="/blog" component={ PostContainer } />
             <Route path="/strings" component={ StringPage } />
             <Route path="/arrays" component={ ArrayPage } />
             <Route path="/numbers" component={ NumberPage } />
-            <Route exact path="/test" component={ TestPage } />
+            <Route exact path="/register" component={ Register } />
+            <Route exact path="/login" component={ Login } />
+            <Route exact path="/blog" component={ PostContainer } />
+            {/*<Route path="/test" component={ TestPage } />*/}
           </div>
         </div>
       </Router>
