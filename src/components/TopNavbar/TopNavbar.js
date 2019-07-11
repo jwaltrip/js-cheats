@@ -46,7 +46,7 @@ class TopNavbar extends Component {
   // it increases performance not to have the components in the search list
   createSearchList = () => {
     // combines the data for: arrays, strings, and numbers using spread operator
-    const completeList = [...arrayData, ...stringData, ...numberData];
+    const completeList = [...stringData, ...arrayData, ...numberData];
     // filter the list, remove the "comp" key, add id
     const filteredList = completeList.map((item, idx) => {
       // delete the component attached to the current object
@@ -89,7 +89,7 @@ class TopNavbar extends Component {
   }
   
   shouldItemRender = (item, value) => {
-    console.log(`item: ${JSON.stringify(item, null, 4)}`);
+    // console.log(`item: ${JSON.stringify(item, null, 4)}`);
     // console.log(`value: ${value}`);
     return item.searchValue.toLowerCase().indexOf(value.toLowerCase()) > -1 || item.searchValue.toLowerCase().endsWith("overview");
   }
@@ -102,8 +102,6 @@ class TopNavbar extends Component {
     if (this.state.currentItem !== null) {
       this.props.history.push(this.state.currentItem.path);
     }
-    
-    // TODO - figure out why path isn't displaying properly once redirected
   }
 
   onLogout = e => {
@@ -123,15 +121,15 @@ class TopNavbar extends Component {
         <NavLink tag={Link} to="/strings/overview" style={{ paddingRight: 7 }}>Strings</NavLink>
       </NavItem>,
       <NavItem key='topnav-left-3'>
-        <NavLink tag={Link} to="/numbers/overview" style={{ paddingRight: 7 }}>Numbers</NavLink>
+        <NavLink tag={Link} to="/arrays/overview" style={{ paddingRight: 7 }}>Arrays</NavLink>
       </NavItem>,
       <NavItem key='topnav-left-4'>
-        <NavLink tag={Link} to="/arrays/overview" style={{ paddingRight: 7 }}>Arrays</NavLink>
+        <NavLink tag={Link} to="/numbers/overview" style={{ paddingRight: 7 }}>Numbers</NavLink>
       </NavItem>,
       <span key='topnav-sep' style={{ margin: 'auto 5px auto 5px', color: 'rgba(255,255,255,.3)' }}>|</span>,
       <NavItem key='topnav-left-1'>
         <NavLink tag={Link} to="/blog">Blog</NavLink>
-      </NavItem>,
+      </NavItem>
     ];
   
     const leftNavLinksNoAuth = [
@@ -139,11 +137,11 @@ class TopNavbar extends Component {
         <NavLink tag={Link} to="/strings/overview" style={{ paddingRight: 7 }}>Strings</NavLink>
       </NavItem>,
       <NavItem key='topnav-left-3'>
-        <NavLink tag={Link} to="/numbers/overview" style={{ paddingRight: 7 }}>Numbers</NavLink>
-      </NavItem>,
-      <NavItem key='topnav-left-4'>
         <NavLink tag={Link} to="/arrays/overview" style={{ paddingRight: 7 }}>Arrays</NavLink>
       </NavItem>,
+      <NavItem key='topnav-left-4'>
+        <NavLink tag={Link} to="/numbers/overview" style={{ paddingRight: 7 }}>Numbers</NavLink>
+      </NavItem>
     ];
     
     // autocomplete dropdown form
