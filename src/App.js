@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import react router
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 // import bootstrap css
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/highlight.js/styles/default.css';
@@ -23,7 +23,6 @@ class App extends Component {
           
           <TopNavbar />
           <div style={{ marginTop: 72 }}>
-            {/*<Switch>*/}
             <Route exact path="/" component={ Home } />
             <Route path="/strings" component={ StringPage } />
             <Route path="/arrays" component={ ArrayPage } />
@@ -32,7 +31,6 @@ class App extends Component {
             <Route exact path="/login" component={ Login } />
             <Route exact path="/blog" component={ PostContainer } />
             {/*<Route path="/test" component={ TestPage } />*/}
-            {/*</Switch>*/}
           </div>
         </div>
       </Router>
