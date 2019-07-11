@@ -1,5 +1,5 @@
 import React from 'react';
-// import sub-pages
+// import STRING sub-pages
 // these are sorted alphabetically (except for overview page)
 import StrOverview from './sub-pages/StrOverview';
 import StrCharAt from './sub-pages/StrCharAt';
