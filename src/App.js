@@ -13,7 +13,7 @@ import Home from "./components/Home/Home";
 import StringPage from "./components/StringPage/StringPage";
 import NumberPage from "./components/NumberPage/NumberPage";
 import ArrayPage from "./components/ArrayPage/ArrayPage";
-import TestPage from "./components/TestPage/TestPage";
+// import TestPage from "./components/TestPage/TestPage";
 
 class App extends Component {
   render() {
