@@ -33,14 +33,13 @@ const MathRound = () => {
     
       <div className="sublabel">Example:</div>
       <div className="example">
-      <iframe 
-            height="400px" 
-            width="100%" 
-            src="https://repl.it/@sarahcheatham/number-Mathround?lite=true" 
-            scrolling="no" 
-            frameBorder="no" 
-            allowFullScreen={true} 
-            sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"
+        <iframe
+          title="math-round"
+          height="400px"
+          width="100%"
+          src="https://repl.it/@sarahcheatham/number-Mathround?lite=true"
+          allowFullScreen={true}
+          sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"
         />
       </div>
     </div>

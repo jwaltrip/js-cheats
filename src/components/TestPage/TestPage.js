@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Container } from "reactstrap";
+import { withRouter } from "react-router";
 import ReactAutocomplete from "react-autocomplete";
 import arrayData from "../ArrayPage/array-routes";
 import numberData from "../NumberPage/number-routes";
@@ -12,8 +13,11 @@ class TestPage extends Component {
     super(props);
     this.state = {
       value: "",
-      items: []
+      items: [],
+      currentItem: null
     };
+  
+    // this.input = React.createRef();
   }
   
   // create the search list when component is rendered
@@ -27,7 +31,7 @@ class TestPage extends Component {
   // it increases performance not to have the components in the search list
   createSearchList = () => {
     // combines the data for: arrays, strings, and numbers using spread operator
-    const completeList = [...arrayData, ...numberData, ...stringData];
+    const completeList = [...arrayData, ...stringData, ...numberData];
     // filter the list, remove the "comp" key, add id
     const filteredList = completeList.map((item, idx) => {
       // delete the component attached to the current object
@@ -40,6 +44,53 @@ class TestPage extends Component {
     return filteredList;
   };
   
+  dropdownItemRender = (item, highlighted) => {
+    // define styles for each catergory title
+    // and make sure that the title's always display in the list
+    let titleStyle = {};
+    if (item.name.endsWith("Overview")) {
+      if (highlighted) {
+        titleStyle.backgroundColor = "#888";
+      } else {
+        titleStyle.backgroundColor = "#686868";
+      }
+      
+      titleStyle.color = "white";
+      titleStyle.fontWeight = "bold";
+    }
+    
+    // dropdown item style
+    const dropdownStyle = {
+      padding: "5px 5px 5px 15px",
+      fontSize: "16px"
+    }
+    
+    return <div
+      key={item.id}
+      style={{ backgroundColor: highlighted ? '#ddd' : '#eee', ...dropdownStyle, ...titleStyle }}
+    >
+      {item.name}
+    </div>;
+  }
+  
+  shouldItemRender = (item, value) => {
+    console.log(`item: ${JSON.stringify(item, null, 4)}`);
+    // console.log(`value: ${value}`);
+    return item.searchValue.toLowerCase().indexOf(value.toLowerCase()) > -1 || item.searchValue.toLowerCase().endsWith("overview");
+  }
+  
+  isItemSelectable = (item) => !item.name.endsWith("Overview");
+  
+  handleOnSubmit = (e) => {
+    e.preventDefault();
+    // get current value in the search bar
+    const searchValue = this.state.value;
+    // test to see if searchValue is a correct full search term
+    if (this.state.currentItem !== null) {
+      this.props.history.push(this.state.currentItem.path);
+    }
+  }
+  
   render() {
     const { items } = this.state;
     
@@ -50,26 +101,29 @@ class TestPage extends Component {
           <hr />
           <br />
   
-          <ReactAutocomplete
-            items={items}
-            shouldItemRender={(item, value) => item.searchValue.toLowerCase().indexOf(value.toLowerCase()) > -1}
-            getItemValue={item => item.name}
-            renderItem={(item, highlighted) =>
-              <div
-                key={item.id}
-                style={{ backgroundColor: highlighted ? '#eee' : 'transparent'}}
-              >
-                {item.name}
-              </div>
-            }
-            value={this.state.value}
-            onChange={e => this.setState({ value: e.target.value })}
-            onSelect={value => this.setState({ value })}
-          />
+          <form className="form-inline my-2 my-lg-0" onSubmit={this.handleOnSubmit}>
+            <ReactAutocomplete
+              ref={el => this.input = el}
+              items={items}
+              shouldItemRender={this.shouldItemRender}
+              isItemSelectable={this.isItemSelectable}
+              getItemValue={item => item.name}
+              renderItem={this.dropdownItemRender}
+              value={this.state.value}
+              onChange={e => this.setState({ value: e.target.value, currentItem: null })}
+              onSelect={(value, item) => this.setState({ value, currentItem: item })}
+              inputProps={{
+                  className: "form-control mr-2",
+                  placeholder: "Search..."
+                }}
+            />
+            <button className="btn btn-outline-success my-2 my-sm-0 mr-3" type="submit" onClick={this.handleOnSubmit}>Search</button>
+          </form>
+          
         </Container>
       </div>
     );
   }
 }
 
-export default TestPage;
+export default withRouter(TestPage);
